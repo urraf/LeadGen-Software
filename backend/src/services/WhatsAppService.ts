@@ -1,5 +1,6 @@
 import pkg from 'whatsapp-web.js';
 const { Client, LocalAuth } = pkg;
+import puppeteer from 'puppeteer';
 import QRCode from 'qrcode';
 import { env } from '../config/env.js';
 import { logger } from '../utils/logger.js';
@@ -45,6 +46,7 @@ class WhatsAppService {
           dataPath: env.WHATSAPP_SESSION_PATH,
         }),
         puppeteer: {
+          executablePath: puppeteer.executablePath(),
           args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
