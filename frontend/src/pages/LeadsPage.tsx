@@ -1,0 +1,369 @@
+import { useState } from 'react';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import client from '../api/client';
+import Badge, { getStatusVariant } from '../components/ui/Badge';
+import EmptyState from '../components/ui/EmptyState';
+import LeadDetailDrawer from '../components/leads/LeadDetailDrawer';
+import {
+  UserGroupIcon,
+  ArrowDownTrayIcon,
+  MagnifyingGlassIcon,
+  ChevronDownIcon,
+} from '@heroicons/react/24/outline';
+import toast from 'react-hot-toast';
+
+interface Lead {
+  _id: string;
+  businessName: string;
+  category: string;
+  city: string;
+  phone: string;
+  email?: string;
+  rating?: number;
+  reviewCount?: number;
+  aiScore: number;
+  aiQualified: boolean;
+  aiReason: string;
+  status: string;
+  createdAt: string;
+  googleMapsUrl: string;
+  address: string;
+  website?: string;
+  followUpCount: number;
+  notes?: string;
+  messageHistory: Array<{
+    _id: string;
+    type: string;
+    channel?: string;
+    content: string;
+    subject?: string;
+    status: string;
+    createdAt: string;
+    errorMessage?: string;
+  }>;
+}
+
+export default function LeadsPage() {
+  const [page, setPage] = useState(1);
+  const [search, setSearch] = useState('');
+  const [statusFilter, setStatusFilter] = useState('');
+  const [minScore, setMinScore] = useState(0);
+  const [selectedLeadId, setSelectedLeadId] = useState<string | null>(null);
+  const [openDropdownId, setOpenDropdownId] = useState<string | null>(null);
+  const queryClient = useQueryClient();
+
+  const { data, isLoading } = useQuery({
+    queryKey: ['leads', page, search, statusFilter, minScore],
+    queryFn: async () => {
+      const params: Record<string, string | number> = { page, limit: 20 };
+      if (search) params.search = search;
+      if (statusFilter) params.status = statusFilter;
+      if (minScore > 0) params.minScore = minScore;
+      const res = await client.get('/leads', { params });
+      return res.data;
+    },
+    refetchInterval: 5000,
+  });
+
+  const contactMutation = useMutation({
+    mutationFn: async ({ leadId, channel }: { leadId: string; channel: string }) => {
+      const res = await client.post(`/leads/${leadId}/contact`, { channel });
+      return res.data;
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({ queryKey: ['leads'] });
+      toast.success(data.message || 'Message queued');
+      setOpenDropdownId(null);
+    },
+    onError: (err: any) => {
+      const msg = err?.response?.data?.error || err?.response?.data?.message || 'Failed to contact lead';
+      toast.error(msg);
+      setOpenDropdownId(null);
+    },
+  });
+
+  const leads: Lead[] = data?.data || [];
+  const pagination = data?.pagination;
+
+  const handleExportCSV = async () => {
+    if (!pagination?.total || pagination.total === 0) return;
+    
+    const toastId = toast.loading('Fetching all data for export...');
+    try {
+      // Fetch all matching leads ignoring current page limit
+      const res = await client.get('/leads', {
+        params: {
+          page: 1,
+          limit: 100000,
+          status: statusFilter || undefined,
+          minScore: minScore > 0 ? minScore : undefined,
+          search: search || undefined,
+        },
+      });
+      
+      const allLeads: Lead[] = res.data.data;
+      
+      const headers = ['Business Name', 'Category', 'City', 'Phone', 'Email', 'Rating', 'Reviews', 'AI Score', 'Status'];
+      const rows = allLeads.map((l) => [
+        `"${String(l.businessName || '').replace(/"/g, '""')}"`, 
+        String(l.category || ''), 
+        `"${String(l.city || '').replace(/"/g, '""')}"`, 
+        String(l.phone || ''), 
+        String(l.email ?? ''), 
+        String(l.rating ?? ''), 
+        String(l.reviewCount ?? ''), 
+        String(l.aiScore ?? ''), 
+        String(l.status || '')
+      ]);
+      const csv = [headers.join(','), ...rows.map((r) => r.join(','))].join('\n');
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `leads-export-${new Date().toISOString().split('T')[0]}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+      
+      toast.success('CSV exported successfully', { id: toastId });
+    } catch (error: any) {
+      console.error('CSV Export Error:', error);
+      alert(`Export error: ${error?.message || String(error)}`);
+      toast.error('Failed to export CSV', { id: toastId });
+    }
+  };
+
+  const getScoreColor = (score: number) => {
+    if (score >= 70) return 'text-emerald-400';
+    if (score >= 40) return 'text-amber-400';
+    return 'text-red-400';
+  };
+
+  const isChannelDisabled = (lead: Lead, channel: string) => {
+    if (channel === 'email' && !lead.email) return true;
+    if (channel === 'instagram') {
+      return lead.messageHistory?.some((m) => m.channel === 'instagram') ?? false;
+    }
+    return ['CONTACTED', 'MESSAGE_SENT', 'DELIVERED', 'READ', 'REPLIED'].includes(lead.status);
+  };
+
+  const isAllContactDisabled = (lead: Lead) => {
+    // If successfully contacted via WhatsApp or Email, disable the whole button
+    if (['CONTACTED', 'MESSAGE_SENT', 'DELIVERED', 'READ', 'REPLIED'].includes(lead.status)) {
+      return true;
+    }
+    return (
+      isChannelDisabled(lead, 'whatsapp') &&
+      isChannelDisabled(lead, 'email') &&
+      isChannelDisabled(lead, 'instagram')
+    );
+  };
+
+  const channelOptions = [
+    { key: 'whatsapp', label: 'WhatsApp', icon: '📱', color: 'text-emerald-400' },
+    { key: 'email', label: 'Email', icon: '📧', color: 'text-blue-400' },
+    { key: 'instagram', label: 'Instagram', icon: '📸', color: 'text-pink-400' },
+  ];
+
+  return (
+    <div className="animate-fade-in">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h1 className="text-2xl font-bold text-white">Leads</h1>
+          <p className="text-sm text-surface-300 mt-1">{pagination?.total ?? 0} total leads</p>
+        </div>
+        <button onClick={handleExportCSV} className="btn-secondary flex items-center gap-2">
+          <ArrowDownTrayIcon className="w-4 h-4" />
+          Export CSV
+        </button>
+      </div>
+
+      {/* Filters */}
+      <div className="glass-card p-4 mb-6">
+        <div className="flex flex-wrap gap-4 items-end">
+          <div className="flex-1 min-w-[200px]">
+            <label className="block text-xs font-medium text-surface-300 mb-1.5">Search</label>
+            <div className="relative">
+              <MagnifyingGlassIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-surface-300" />
+              <input
+                className="input-field pl-10"
+                placeholder="Search businesses..."
+                value={search}
+                onChange={(e) => { setSearch(e.target.value); setPage(1); }}
+              />
+            </div>
+          </div>
+          <div className="w-40">
+            <label className="block text-xs font-medium text-surface-300 mb-1.5">Status</label>
+            <select
+              className="input-field"
+              value={statusFilter}
+              onChange={(e) => { setStatusFilter(e.target.value); setPage(1); }}
+            >
+              <option value="">All</option>
+              <option value="NEW">New</option>
+              <option value="QUALIFIED">Qualified</option>
+              <option value="CONTACTED">Contacted</option>
+              <option value="MESSAGE_SENT">Message Sent</option>
+              <option value="REPLIED">Replied</option>
+              <option value="INTERESTED">Interested</option>
+              <option value="CONVERTED">Converted</option>
+              <option value="COLD">Cold</option>
+            </select>
+          </div>
+          <div className="w-40">
+            <label className="block text-xs font-medium text-surface-300 mb-1.5">Min Score: {minScore}</label>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value={minScore}
+              onChange={(e) => { setMinScore(Number(e.target.value)); setPage(1); }}
+              className="w-full accent-brand-500"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Table */}
+      {leads.length > 0 ? (
+        <div className="glass-card overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b border-surface-700/30">
+                  <th className="text-left text-xs font-semibold text-surface-300 uppercase tracking-wider px-5 py-3">Business</th>
+                  <th className="text-left text-xs font-semibold text-surface-300 uppercase tracking-wider px-5 py-3">Category</th>
+                  <th className="text-left text-xs font-semibold text-surface-300 uppercase tracking-wider px-5 py-3">City</th>
+                  <th className="text-center text-xs font-semibold text-surface-300 uppercase tracking-wider px-5 py-3">Rating</th>
+                  <th className="text-center text-xs font-semibold text-surface-300 uppercase tracking-wider px-5 py-3">Score</th>
+                  <th className="text-center text-xs font-semibold text-surface-300 uppercase tracking-wider px-5 py-3">Status</th>
+                  <th className="text-right text-xs font-semibold text-surface-300 uppercase tracking-wider px-5 py-3">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {leads.map((lead) => (
+                  <tr
+                    key={lead._id}
+                    onClick={() => setSelectedLeadId(lead._id)}
+                    className="border-b border-surface-700/20 hover:bg-surface-800/30 cursor-pointer transition-colors"
+                  >
+                    <td className="px-5 py-4">
+                      <p className="text-sm font-medium text-white">{lead.businessName}</p>
+                      <p className="text-xs text-surface-300">{lead.phone}</p>
+                    </td>
+                    <td className="px-5 py-4 text-sm text-surface-200 capitalize">{lead.category}</td>
+                    <td className="px-5 py-4 text-sm text-surface-200">{lead.city}</td>
+                    <td className="px-5 py-4 text-center">
+                      <span className="text-sm text-surface-200">
+                        {lead.rating ? `${lead.rating}★` : '—'} <span className="text-xs text-surface-300">({lead.reviewCount ?? 0})</span>
+                      </span>
+                    </td>
+                    <td className="px-5 py-4 text-center">
+                      <span className={`text-sm font-bold ${getScoreColor(lead.aiScore)}`}>
+                        {lead.aiScore}
+                      </span>
+                    </td>
+                    <td className="px-5 py-4 text-center">
+                      <Badge label={lead.status} variant={getStatusVariant(lead.status)} />
+                    </td>
+                    <td className="px-5 py-4 text-right">
+                      <div className="relative inline-block">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (isAllContactDisabled(lead)) return;
+                            setOpenDropdownId(openDropdownId === lead._id ? null : lead._id);
+                          }}
+                          disabled={isAllContactDisabled(lead)}
+                          className="flex items-center gap-1 text-xs font-medium text-brand-400 hover:text-brand-300 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                        >
+                          Contact
+                          <ChevronDownIcon className="w-3 h-3" />
+                        </button>
+
+                        {/* Channel Dropdown */}
+                        {openDropdownId === lead._id && (
+                          <div
+                            className="absolute right-0 top-full mt-1 w-40 bg-surface-800 border border-surface-700/50 rounded-xl shadow-xl z-50 overflow-hidden animate-fade-in"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            {channelOptions.map((ch) => (
+                              <button
+                                key={ch.key}
+                                onClick={() => {
+                                  contactMutation.mutate({ leadId: lead._id, channel: ch.key });
+                                  if (ch.key === 'instagram') {
+                                    window.open(`https://www.instagram.com/explore/search/keyword/?q=${encodeURIComponent(lead.businessName)}`, '_blank');
+                                  }
+                                }}
+                                disabled={contactMutation.isPending || isChannelDisabled(lead, ch.key)}
+                                className="w-full text-left px-4 py-2.5 text-sm hover:bg-surface-700/50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
+                              >
+                                <span>{ch.icon}</span>
+                                <span className={ch.color}>{ch.label}</span>
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Pagination */}
+          {pagination && pagination.totalPages > 1 && (
+            <div className="flex items-center justify-between px-5 py-3 border-t border-surface-700/30">
+              <p className="text-xs text-surface-300">
+                Page {pagination.page} of {pagination.totalPages}
+              </p>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setPage((p) => Math.max(1, p - 1))}
+                  disabled={page === 1}
+                  className="btn-secondary text-xs py-1.5 px-3 disabled:opacity-30"
+                >
+                  Previous
+                </button>
+                <button
+                  onClick={() => setPage((p) => p + 1)}
+                  disabled={page >= pagination.totalPages}
+                  className="btn-secondary text-xs py-1.5 px-3 disabled:opacity-30"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      ) : (
+        <EmptyState
+          icon={<UserGroupIcon className="w-8 h-8" />}
+          title="No leads found"
+          description="Start a campaign to discover and qualify leads automatically."
+        />
+      )}
+
+      {/* Detail Drawer */}
+      {selectedLeadId && leads.find((l) => l._id === selectedLeadId) && (
+        <LeadDetailDrawer
+          lead={leads.find((l) => l._id === selectedLeadId)!}
+          onClose={() => setSelectedLeadId(null)}
+          onContact={(channel) => {
+            contactMutation.mutate({ leadId: selectedLeadId, channel });
+            if (channel === 'instagram') {
+              const lead = leads.find((l) => l._id === selectedLeadId);
+              if (lead) {
+                window.open(`https://www.instagram.com/explore/search/keyword/?q=${encodeURIComponent(lead.businessName)}`, '_blank');
+              }
+            }
+          }}
+          isContacting={contactMutation.isPending}
+        />
+      )}
+    </div>
+  );
+}

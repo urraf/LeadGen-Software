@@ -1,0 +1,3187 @@
+{
+  "search_metadata": {
+    "id": "6a403eb912eb1475d0fd3941",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/Jp0b2-IZ2dC9OkWkcKj7WA/6a403eb912eb1475d0fd3941.json",
+    "created_at": "2026-06-27 21:20:57 UTC",
+    "processed_at": "2026-06-27 21:20:57 UTC",
+    "google_maps_url": "https://www.google.com/maps/search/coffee+in+austin//data=!3m1!4b1!4m2!2m1!6e5?hl=en",
+    "raw_html_file": "https://serpapi.com/searches/Jp0b2-IZ2dC9OkWkcKj7WA/6a403eb912eb1475d0fd3941.html",
+    "prettify_html_file": "https://serpapi.com/searches/Jp0b2-IZ2dC9OkWkcKj7WA/6a403eb912eb1475d0fd3941.prettify",
+    "total_time_taken": 1.01
+  },
+  "search_parameters": {
+    "engine": "google_maps",
+    "type": "search",
+    "q": "coffee in austin",
+    "google_domain": "google.com",
+    "hl": "en",
+    "start": 20
+  },
+  "search_information": {
+    "local_results_state": "Results for exact spelling",
+    "query_displayed": "coffee in austin"
+  },
+  "local_results": [
+    {
+      "position": 1,
+      "title": "Desnudo Coffee: East Austin",
+      "place_id": "ChIJe183tCW1RIYRegUwl5jCcx0",
+      "data_id": "0x8644b525b4375f7b:0x1d73c2989730057a",
+      "data_cid": "2122253810048959866",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b525b4375f7b%3A0x1d73c2989730057a&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b525b4375f7b%3A0x1d73c2989730057a&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.2630986,
+        "longitude": -97.7137874
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJe183tCW1RIYRegUwl5jCcx0",
+      "provider_id": "/g/11sr2623d5",
+      "rating": 4.8,
+      "reviews": 867,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Cafe",
+        "Coffee roastery",
+        "Coffee stand",
+        "Coffee wholesaler",
+        "Espresso bar"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "cafe",
+        "coffee_roasters",
+        "coffee_stand",
+        "coffee_wholesaler",
+        "espresso_bar"
+      ],
+      "address": "2505 Webberville Rd, Austin, TX 78702",
+      "country": "United States",
+      "open_state": "Closed · Opens 7:30 AM Sun",
+      "hours": "Closed · Opens 7:30 AM Sun",
+      "operating_hours": {
+        "saturday": "7:30 AM–2:30 PM",
+        "sunday": "7:30 AM–2:30 PM",
+        "monday": "7 AM–2 PM",
+        "tuesday": "7 AM–2 PM",
+        "wednesday": "7 AM–12:30 PM",
+        "thursday": "7 AM–2 PM",
+        "friday": "7 AM–2 PM"
+      },
+      "phone": "(424) 400-1857",
+      "website": "http://www.desnudocoffee.com/",
+      "description": "Friendly staff at this truck serving artisanal espresso drinks made with fresh-roasted, direct-source beans from Colombia.",
+      "extensions": [
+        {
+          "from_the_business": [
+            "Identifies as Latino-owned",
+            "Small business"
+          ]
+        },
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection",
+            "Serves local specialty"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "College students",
+            "Family-friendly",
+            "Groups",
+            "LGBTQ+ friendly",
+            "Tourists",
+            "Transgender safespace"
+          ]
+        },
+        {
+          "planning": [
+            "Usually a wait"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Free street parking",
+            "On-site parking",
+            "Usually somewhat difficult to find a space"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed",
+            "Dogs allowed inside",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": false
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFzcjI2MjNkNRgCOgMI8A0%3D&g2lbs=AEzIGDs928tfvGWYfOuo4F6fuoenDvT_-JOjNZOWQSyKGQnlt8tSbPGsQvs5-ifO7JAcbiE61Ucx&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=uT5AavGoJaCCxc8PwuTM-As&ei=uT5AavGoJaCCxc8PwuTM-As&fo_s=OA,SOE&opi=79508299&orderType=2&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Their cappuccino is perfection and the guava matcha is an experience.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGsDrv_4oFJGRVmbO5dAuE_Ua1IFbvPDiDWTZA5r3d9GsOHu_-pjoGP0qnSgrdCoE3WuwBK5zSmfeZAW7ljPflVgKh2U6oJp5OpxX7Z7OFDYQLivwUv1zG3U5KLJV9vtNfzn10=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/mDn7_HicHcRLjoIwAADQE1WK2CFO4qKKdAaM4AdQNkT5FB1oKy3FcMC5g7cx8S3e679WSshvw2hqa0I5p03Zy7LLOVMlU5OctwYVEuQSSAOH290fJtLpdDbjrkf2cXsNUIH7dRZdzF_3qkPn5iTHFKPOKuZEBj99BsSdkxA-2IF2xYqvraQflj4aD21Vpjixm3tYNTH162n0xT2BAvE82akduM55t7npIdLmSKwI-Rsvnmu1rUZmwsVgQghB_TkH7A0RokQj"
+    },
+    {
+      "position": 2,
+      "title": "Trippy Buck Coffee",
+      "place_id": "ChIJbz4l-kK1RIYRElA6U66oEQg",
+      "data_id": "0x8644b542fa253e6f:0x811a8ae533a5012",
+      "data_cid": "581431293581611026",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b542fa253e6f%3A0x811a8ae533a5012&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b542fa253e6f%3A0x811a8ae533a5012&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.269416999999997,
+        "longitude": -97.7410702
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJbz4l-kK1RIYRElA6U66oEQg",
+      "provider_id": "/g/11yr7q6kv6",
+      "rating": 4.9,
+      "reviews": 34,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "720 Brazos St, Austin, TX 78701",
+      "country": "United States",
+      "open_state": "Closed · Opens 8 AM Mon",
+      "hours": "Closed · Opens 8 AM Mon",
+      "operating_hours": {
+        "saturday": "Closed",
+        "sunday": "Closed",
+        "monday": "8 AM–5 PM",
+        "tuesday": "8 AM–5 PM",
+        "wednesday": "8 AM–5 PM",
+        "thursday": "8 AM–5 PM",
+        "friday": "Closed"
+      },
+      "website": "https://linktr.ee/TrippyBuckCoffee?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAOvltFleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafPGTs3doC7G6iYl4bdm8eobtHYT7lwdrmtAJIogPc3m1ER7rdba5rs15R47g_aem_v9KZ91BuOHvER1SQpfRq0Q",
+      "extensions": [
+        {
+          "from_the_business": [
+            "Small business"
+          ]
+        },
+        {
+          "service_options": [
+            "Onsite services",
+            "Dine-in"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee"
+          ]
+        },
+        {
+          "dining_options": [
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly",
+            "LGBTQ+ friendly",
+            "Transgender safespace"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "parking": [
+            "Paid parking garage",
+            "Paid street parking"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "delivery": false
+      },
+      "user_review": "\"Some of the best coffee in Austin with the best staff and great prices.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHQlNd0oVdeMxjPjdmDIneLG_UnJY7qa7cGluOTwRKj7W_GObKfJLQlZRwxMyWxaM_kE0CvkEDgqfjC8Cb3u1u9t9qIf11dOZqOKZPqJVaZU_G9CihBfYpz4LsCMKk8ZsNZ8pFx58RRcUsG=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/kVoDVXicHcTNboIwAADgJ0JK1ABLPGjVKv8Q0dgLwVJgUFtqy2B7yZ33Nkv8Dt_fb6v1oD5Mk7XLRSNEw-io6IsIrinXCyKeZjMogyhDmdskSvvtKWVRBcS1ouHcJV313J85DVCRc-9uy9ImiI3xZcr8zr4VKH74tRekDGfTHH7f5jIs-gOAX_1h38i6gw58LEdrdLUrz7VlVTGWsY8T6V1LnBfIhZ_trr4PP6tAwdDvHawi7AzHee1kGckV2kwWAMBo3xOD_wMGYUf-"
+    },
+    {
+      "position": 3,
+      "title": "Summer Moon Coffee",
+      "place_id": "ChIJvze-K3XMRIYRsptoVvJWnko",
+      "data_id": "0x8644cc752bbe37bf:0x4a9e56f256689bb2",
+      "data_cid": "5376830603958721458",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644cc752bbe37bf%3A0x4a9e56f256689bb2&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644cc752bbe37bf%3A0x4a9e56f256689bb2&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.3943718,
+        "longitude": -97.7201575
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJvze-K3XMRIYRsptoVvJWnko",
+      "provider_id": "/g/11ckkscl5q",
+      "rating": 4.6,
+      "reviews": 2028,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "11005 Burnet Rd Ste 112, Austin, TX 78758",
+      "country": "United States",
+      "open_state": "Open · Closes 7 PM",
+      "hours": "Open · Closes 7 PM",
+      "operating_hours": {
+        "saturday": "6 AM–7 PM",
+        "sunday": "6 AM–7 PM",
+        "monday": "5 AM–7 PM",
+        "tuesday": "5 AM–7 PM",
+        "wednesday": "5 AM–7 PM",
+        "thursday": "5 AM–7 PM",
+        "friday": "5 AM–7 PM"
+      },
+      "phone": "(737) 300-1265",
+      "website": "https://locations.summermooncoffee.com/locations/burnet-rd-austin/",
+      "description": "Organic, fair-trade coffee & snacks. Local roaster for wood-fired, fair-trade coffee, pastries & breakfast tacos in a quaint setting.",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Curbside pickup",
+            "No-contact delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Happy hour food",
+            "Organic dishes",
+            "Quick bite"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Gender-neutral restroom",
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "College students",
+            "Family-friendly",
+            "Groups",
+            "Tourists"
+          ]
+        },
+        {
+          "planning": [
+            "Usually a wait"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids",
+            "High chairs"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Free street parking",
+            "Paid parking lot",
+            "Usually plenty of parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "curbside_pickup": true,
+        "no_contact_delivery": true
+      },
+      "user_review": "\"Friendly staff, amazing matcha latte, and a great chocolate croissant.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGMiFSIOdR2tif3Y50uUoxFLwdoKck69vgYHv4AcVjZDnapYa3hMNhIVx6kGZZmR3IlRfwQK-XoRH2S_UeZo8YDhZHdcvQmUjO45-c6MetSa8hRX3WoNvGuudjiGOnef3zQoppQSg=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/_8bnA3icHcTdboIwGADQJ6owq8SZeEFiBOIAW4KT3iyklJa_fs1awPiGe4S9zZKdi_P7o5wz9uh5o8IbCSBHMVvxzUE7od2Gw-RJYxG3yHrhLSNDGKXdpUjyhm5d1-Jq788lPC8fawNXPgTvi6ziZRfye8_OujZVjVWaqeT-DIaIsYniZKTtSq7oATTeFl-lYHCozorFDV_IVPb5bo94kApX1AdFH_gTsiWa56bvolyLFr8IGEMKeVrffN9H6n-O9B8Md0Yl"
+    },
+    {
+      "position": 4,
+      "title": "Houndstooth Coffee",
+      "place_id": "ChIJXQ-Uy2LKRIYRehVdV3iu_1M",
+      "data_id": "0x8644ca62cb940f5d:0x53ffae78575d157a",
+      "data_cid": "6052748256094262650",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644ca62cb940f5d%3A0x53ffae78575d157a&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644ca62cb940f5d%3A0x53ffae78575d157a&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.3105861,
+        "longitude": -97.74000029999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJXQ-Uy2LKRIYRehVdV3iu_1M",
+      "provider_id": "/g/1tmxrdrd",
+      "rating": 4.4,
+      "reviews": 774,
+      "price": "$1–20",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Beer store",
+        "Cafe",
+        "Coffee store",
+        "Espresso bar",
+        "Wine bar"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "beer_store",
+        "cafe",
+        "coffee_store",
+        "espresso_bar",
+        "wine_bar"
+      ],
+      "address": "4200 N Lamar Blvd Ste 120, Austin, TX 78756",
+      "country": "United States",
+      "open_state": "Open · Closes 7 PM",
+      "hours": "Open · Closes 7 PM",
+      "operating_hours": {
+        "saturday": "6:30 AM–7 PM",
+        "sunday": "6:30 AM–7 PM",
+        "monday": "6:30 AM–7 PM",
+        "tuesday": "6:30 AM–7 PM",
+        "wednesday": "6:30 AM–7 PM",
+        "thursday": "6:30 AM–7 PM",
+        "friday": "6:30 AM–7 PM"
+      },
+      "phone": "(512) 531-9417",
+      "website": "http://www.houndstoothcoffee.com/?utm_source=google&utm_medium=organic&utm_campaign=googlebusiness",
+      "description": "Airy spot for carefully sourced coffee. This chill, airy hangout serves carefully sourced coffees, teas, wines & craft beer, plus snacks.",
+      "extensions": [
+        {
+          "from_the_business": [
+            "Small business"
+          ]
+        },
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Fast service",
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Alcohol",
+            "Beer",
+            "Coffee",
+            "Wine"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom",
+            "Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "College students",
+            "Family-friendly",
+            "Tourists"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Paid parking lot",
+            "Usually plenty of parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": false
+      },
+      "user_review": "\"The coffee was rich and perfectly brewed, and the staff were super friendly.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGd3xzz3dWl0LPvjC3RGheaYjhjdbXfYem8ATQ3ddtQPyPD3u87Y1FgHGUmc0F4WRT4xs0DpR2PQ0OXvys0BbiveXHP8CS3ispYBiEJcsZafQjMy3yDpUeQTvzY2iDbVdFMvlagnw=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/Ye-HS3icHcTdboIwGADQJ0KqNRlZ4gXKwBjdWsRBdwdtbWH8NH61Cm_oI_g2Jp6L83xoaw18-n6r8UwNg2rlFeSFD72VvZ3xofOVAY-DB35Ivul_mAh8nyYs8hbtiWs2OE20LFmjG1EVZya7IMwoFsJSMpIIX4MPNo_VNjl1HMXLPM2Wd0CRSReEop_CjYDWVe1ksSXB5ohrMGxdf-04_JVn2hxGPEbmJGnmJraoo-pXxAfXlqq_rW5zhJCn33OvfwH9TUX_"
+    },
+    {
+      "position": 5,
+      "title": "Merit Coffee Co.",
+      "place_id": "ChIJLYzNJQ61RIYRpcqevnY5-gM",
+      "data_id": "0x8644b50e25cd8c2d:0x3fa3976be9ecaa5",
+      "data_cid": "286604708458449573",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b50e25cd8c2d%3A0x3fa3976be9ecaa5&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b50e25cd8c2d%3A0x3fa3976be9ecaa5&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.267570199999998,
+        "longitude": -97.75209799999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJLYzNJQ61RIYRpcqevnY5-gM",
+      "provider_id": "/g/11gf1vbmvm",
+      "rating": 4.5,
+      "reviews": 574,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Cafe",
+        "Coffee store",
+        "Espresso bar"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "cafe",
+        "coffee_store",
+        "espresso_bar"
+      ],
+      "address": "222 West Ave #120, Austin, TX 78701",
+      "country": "United States",
+      "open_state": "Open · Closes 7 PM",
+      "hours": "Open · Closes 7 PM",
+      "operating_hours": {
+        "saturday": "7 AM–7 PM",
+        "sunday": "7 AM–6 PM",
+        "monday": "6:30 AM–7 PM",
+        "tuesday": "6:30 AM–7 PM",
+        "wednesday": "6:30 AM–7 PM",
+        "thursday": "6:30 AM–7 PM",
+        "friday": "6:30 AM–7 PM"
+      },
+      "phone": "(512) 906-0266",
+      "website": "https://meritcoffee.com/pages/seaholm",
+      "description": "Roastery, coffee shop & baked goods. Specialty coffee shop & roaster with Bakery Lorraine's baked goods & pies, tacos, juices & donuts.",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Lunch",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly",
+            "LGBTQ+ friendly",
+            "Tourists",
+            "Transgender safespace"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Kids' menu"
+          ]
+        },
+        {
+          "parking": [
+            "Paid parking garage",
+            "Paid parking lot",
+            "Paid street parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed inside",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFnZjF2Ym12bRgBOgMI8A0%3D&g2lbs=AEzIGDtVdvY3y4i9gfLRjx9EncyVWr76-EQJZuwFt6RnVM5KZhAF6Vo1mwZVuAffd4qTUwqYB9X3&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=uT5AavGoJaCCxc8PwuTM-As&ei=uT5AavGoJaCCxc8PwuTM-As&fo_s=OA,SOE&opi=79508299&orderType=1&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Excellent coffee, friendly service, fast wifi, highly recommended!\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGOFSEpEz6mF4dqfZz8biJi36-Pe-oJVSAGEbdroW8mpbUHLOj1FcZ-kpXP7UBhL5SwFYovYsmS5FJkWoyDFJhjJ-O2Lzcebo-SixmvvV9-h-J3VvK5K_jyXiF4WkrOuYGK2UJg=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/yukE5nicHcTRboIwFADQL7qCIk6X-MAixRQiLA0gvphQKwUst6OIkx_0G_Y3JjsP5-8lh0GbT8u6SWdWIVY3cTei59gNohtmHJVVaQPcgLG85PDdekFMmK_9aaXI8vJzPU3rsqa1s4JEANKMeYFfXnrM10qX6T6KmznhJ2j1MflIv2TksgcpcCyMYi6hbY7PHaGyoRAvoomLEoHVv2ocsw1IoE42hm54bp7Hmizzto_vRRAuUlptH3PbtkH-z6F7Ayy0RD0"
+    },
+    {
+      "position": 6,
+      "title": "Idlewild Coffee",
+      "place_id": "ChIJYT7kOnO1RIYRmSNPwVvF1Sw",
+      "data_id": "0x8644b5733ae43e61:0x2cd5c55bc14f2399",
+      "data_cid": "3230705305584083865",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b5733ae43e61%3A0x2cd5c55bc14f2399&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b5733ae43e61%3A0x2cd5c55bc14f2399&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.276532699999997,
+        "longitude": -97.74967389999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJYT7kOnO1RIYRmSNPwVvF1Sw",
+      "provider_id": "/g/11dfgsdb_y",
+      "rating": 4.8,
+      "reviews": 296,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Coffee roastery"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "coffee_roasters"
+      ],
+      "address": "824 W 12th St, Austin, TX 78701",
+      "country": "United States",
+      "open_state": "Open · Closes 6 PM",
+      "hours": "Open · Closes 6 PM",
+      "operating_hours": {
+        "saturday": "8 AM–6 PM",
+        "sunday": "8 AM–6 PM",
+        "monday": "8 AM–6 PM",
+        "tuesday": "8 AM–6 PM",
+        "wednesday": "8 AM–6 PM",
+        "thursday": "8 AM–6 PM",
+        "friday": "8 AM–6 PM"
+      },
+      "phone": "(512) 804-0472",
+      "website": "https://www.idlewildcoffee.com/",
+      "description": "Coffee, espresso and latte shop attached to a skate shop that also serves muffins and sandwiches.",
+      "extensions": [
+        {
+          "service_options": [
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Fast service",
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot"
+          ]
+        },
+        {
+          "offerings": [
+            "Alcohol",
+            "Coffee",
+            "Comfort food",
+            "Prepared foods",
+            "Quick bite"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Bar onsite",
+            "Restroom",
+            "Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "College students"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Free street parking",
+            "Paid street parking",
+            "Usually plenty of parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed",
+            "Dogs allowed inside",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": false
+      },
+      "user_review": "\"The baristas were so friendly and made us some delicious macchiatos.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFxjD1f-6diajEP6IRsAbEzFOd3EGIdi_gWCGd5RQTQYEa_KydcZJ2RUzIDPKm7qtq15MojpzrZoTtjwIo8JDihw857hsnFLPaoonXdII7O7fO0OiyMSKk8o4o3Irqm55WVP6zXLg=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/dihEEXicHcTdboIwGADQJ6rAsECW7IIImIqOwnT-3BjWYgtKP6A1TN7QR9jbmOxcnL-nNKbT75Z1k-5MAIhbddfVwECZSpkZg9YSnUZMI22F9DO_hslvEzkX5PG6bGLqkUKHP_GUZNyNl4TXZ7FfLDku8m1-jMtz-uDstHordhOJaNr6vekdvIGmm4YTbE0zEghWUS3HAPtSq2RNSwB14IT4mX_J7Kx-bL7SawBzcMnQtxjvv6k3HdbiY3Rs20byf4bUC9cHRUA"
+    },
+    {
+      "position": 7,
+      "title": "Cosmic Pickle",
+      "place_id": "ChIJA7CVXZW0RIYRVSZIlvlwJbA",
+      "data_id": "0x8644b4955d95b003:0xb02570f996482655",
+      "data_cid": "12692675342084089429",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b4955d95b003%3A0xb02570f996482655&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b4955d95b003%3A0xb02570f996482655&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.226957,
+        "longitude": -97.7624945
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJA7CVXZW0RIYRVSZIlvlwJbA",
+      "provider_id": "/g/11f3mbb3st",
+      "rating": 4.7,
+      "reviews": 4344,
+      "price": "$20–30",
+      "extracted_price": 20,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Beer garden",
+        "Cafe",
+        "Bar",
+        "Food court",
+        "Garden"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "beer_garden",
+        "cafe",
+        "bar",
+        "food_court",
+        "garden"
+      ],
+      "address": "121 Pickle Rd, Austin, TX 78704",
+      "country": "United States",
+      "open_state": "Open · Closes 12 AM",
+      "hours": "Open · Closes 12 AM",
+      "operating_hours": {
+        "saturday": "8 AM–12 AM",
+        "sunday": "8 AM–10 PM",
+        "monday": "8 AM–10 PM",
+        "tuesday": "8 AM–10 PM",
+        "wednesday": "8 AM–10 PM",
+        "thursday": "8 AM–12 AM",
+        "friday": "8 AM–12 AM"
+      },
+      "phone": "(512) 763-7216",
+      "website": "https://www.cosmichospitalitygroup.com/",
+      "description": "Craft beer, coffee & food trucks. Specialty coffee, local beers, craft cocktails & live music, plus food trucks in a garden setting.",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Fast service",
+            "Great beer selection",
+            "Great cocktails",
+            "Live music",
+            "Live performances"
+          ]
+        },
+        {
+          "popular_for": [
+            "Solo dining"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom"
+          ]
+        },
+        {
+          "offerings": [
+            "Alcohol",
+            "Beer",
+            "Cocktails",
+            "Food",
+            "Food at bar",
+            "Hard liquor",
+            "Wine"
+          ]
+        },
+        {
+          "dining_options": [
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Groups",
+            "LGBTQ+ friendly",
+            "Tourists"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Free street parking",
+            "Paid parking lot",
+            "Paid street parking",
+            "Usually plenty of parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": false
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFmM21iYjNzdBgAOgMI8A0%3D&g2lbs=AEzIGDu2HxLIakEQGFA8K5KrFf4nLInfZyFY0Q6C-LxVQwYseoUm3EN1vguqyWVBlSjX2iMISswZ&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=uT5AavGoJaCCxc8PwuTM-As&ei=uT5AavGoJaCCxc8PwuTM-As&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"The coffee was to die for here and service was amazing.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFFwf09vg-A-UOTFEXwqzY86hPNqihai0caf3IThGnGyi5XEpI-dBfyfCyCj7Q1P7OKctBni9H0ybZhH1SDkVloB0AEu_sYxVA3rfKuROVQq_cCjbAcIHGUxpo1UIdS2JFrdVKw=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/vZHXT3icHcRJDoIwAADAF1WKxDXxUJBNEhYVgl6MFkpRbIEWAT_oG_yNiXOY74dKWYu1olRUmxScF1XeibzFnMmcyQnmT6WoBcACCAWFfvRAltUTuHoVAIE4OFpm2jfv03JOQ78p6bWE-Eo090htZo_lLDVrF2Q6GYkxGvdFpIaLwMNSZ-XKgePtTB31sH0kFdchMruLOA0J0lridfsgiZoLNu43hF3Hjoeaq7GbHaY7q80Sr9_0KoQQ0P8YsB8uT0Rc"
+    },
+    {
+      "position": 8,
+      "title": "Figure 8 Coffee Purveyors",
+      "place_id": "ChIJIaQIWY_LRIYRmodezbsrvpc",
+      "data_id": "0x8644cb8f5908a421:0x97be2bbbcd5e879a",
+      "data_cid": "10934225030906546074",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644cb8f5908a421%3A0x97be2bbbcd5e879a&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644cb8f5908a421%3A0x97be2bbbcd5e879a&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.3065522,
+        "longitude": -97.7152485
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJIaQIWY_LRIYRmodezbsrvpc",
+      "provider_id": "/g/11y1n3gfn3",
+      "rating": 4.7,
+      "reviews": 131,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "4631 Airport Blvd #125, Austin, TX 78751",
+      "country": "United States",
+      "open_state": "Open · Closes 7 PM",
+      "hours": "Open · Closes 7 PM",
+      "operating_hours": {
+        "saturday": "7 AM–7 PM",
+        "sunday": "7 AM–7 PM",
+        "monday": "7 AM–7 PM",
+        "tuesday": "7 AM–7 PM",
+        "wednesday": "7 AM–7 PM",
+        "thursday": "7 AM–7 PM",
+        "friday": "7 AM–7 PM"
+      },
+      "website": "https://www.figure8coffeepurveyors.com/",
+      "description": "Cozy coffee shop serving breakfast and pastries, plus wine.",
+      "extensions": [
+        {
+          "service_options": [
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Fast service",
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Alcohol",
+            "Coffee",
+            "Wine"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert"
+          ]
+        },
+        {
+          "amenities": [
+            "Bar onsite",
+            "Restroom",
+            "Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Quiet",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "College students"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Free street parking",
+            "Usually plenty of parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed inside",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": false
+      },
+      "user_review": "\"The coffee is consistently excellent, carefully crafted, and full of flavor.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF55F66fQTN00zcwNdb7oxacEcCwbihfuQiT1Xrv7v74ybb3zE7iCNgBEKThhW8SHtqwxpKw1fC2SSnbiKxOC14q7M8sICYa982KuESnr3t6AS6fmCohZvgXkMsrD9SqlHDRMjD=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/kepdn3icHcRRboIwAADQEyFFhOKSfbACcSGgWBKZf7ZCy8QWaKHoBXeG3cbE9_H-_7jWvfqw7Y67KyYl6-pJ1SOVQtdCr6i826xXFlWWssNDXtzCxPMS32-KMgfgSU1-JVAuFxpTZEjLm6loS6caZzjDzYMQ9xnDFuXsK05Lzk8B3unBLH1qnAatMRakTZc9cjYDzAL1jX4u22CdTjEWo6v9EPvNHUl-nll1y9QYbfHQ7aJj9ht9GgcAYPH31BIvQC5EZw"
+    },
+    {
+      "position": 9,
+      "title": "Flightpath Coffeehouse",
+      "place_id": "ChIJ01pILW3KRIYRD22IOqyGl5M",
+      "data_id": "0x8644ca6d2d485ad3:0x939786ac3a886d0f",
+      "data_cid": "10635117119333231887",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644ca6d2d485ad3%3A0x939786ac3a886d0f&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644ca6d2d485ad3%3A0x939786ac3a886d0f&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.313768999999997,
+        "longitude": -97.7198749
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ01pILW3KRIYRD22IOqyGl5M",
+      "provider_id": "/m/020yx4f",
+      "rating": 4.5,
+      "reviews": 841,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Cafe",
+      "types": [
+        "Cafe"
+      ],
+      "type_id": "cafe",
+      "type_ids": [
+        "cafe"
+      ],
+      "address": "5011 Duval St, Austin, TX 78751",
+      "country": "United States",
+      "open_state": "Open · Closes 7 PM",
+      "hours": "Open · Closes 7 PM",
+      "operating_hours": {
+        "saturday": "7 AM–7 PM",
+        "sunday": "7 AM–7 PM",
+        "monday": "7 AM–7 PM",
+        "tuesday": "7 AM–7 PM",
+        "wednesday": "7 AM–7 PM",
+        "thursday": "7 AM–7 PM",
+        "friday": "7 AM–7 PM"
+      },
+      "phone": "(512) 458-4472",
+      "website": "http://flightpathcoffeehouse.com/",
+      "description": "Tranquil cafe with locally made eats. This hip, art-adorned coffee shop serving locally sourced snacks is known for its tranquil vibe.",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Fast service",
+            "Great coffee",
+            "Great tea selection",
+            "Serves local specialty"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Alcohol",
+            "Beer",
+            "Coffee",
+            "Late-night food",
+            "Organic dishes",
+            "Quick bite",
+            "Vegetarian options",
+            "Wine"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Lunch",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Gender-neutral restroom",
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Quiet",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "College students",
+            "Groups"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Free street parking",
+            "On-site parking",
+            "Paid parking lot",
+            "Paid street parking",
+            "Usually somewhat difficult to find a space"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": false
+      },
+      "user_review": "\"Delicious coffee, great staff, and lots of working space.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGc4O6W85z9HOzZzYh0J2LSo5VyNYMLYY4Qb8P5Oy2T36C0Ir04DM-a-S_K7KErntj5IM-LZGQTNO3VVnTf83Xh3AVWfKL_3oFmZRdNDnVt8KTDSatDrwpuImJOIYDQM7Wh8KWXTw=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/brFh-nicHcRRboIwAADQE1U6C9ot2Qexm8MCFWmK5cdoRRqVltAaIjfcEXabJb6P9_erve_dRxDcNZq11rb35uGaQVnjG-NnynZB2zugHHBBvM2LW7xWIVtUOJref9hUT1LDzTwtbSSeucxSKcPihLcRe845WqxgMsCQZOAIygNd0q_B-GuUZCCt1wXPGRLC8AtGe41iUV1oekD2u6t355wY4THlpDx6Moz9I-k2LJGkyJaVxrTa8_FzfIMQAv1aAfMPtllCbw"
+    },
+    {
+      "position": 10,
+      "title": "Cielito Lindo Cafe",
+      "place_id": "ChIJoc-uNwC1RIYRa-M22GaGstc",
+      "data_id": "0x8644b50037aecfa1:0xd7b28666d836e36b",
+      "data_cid": "15542633040281265003",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b50037aecfa1%3A0xd7b28666d836e36b&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b50037aecfa1%3A0xd7b28666d836e36b&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.266410999999998,
+        "longitude": -97.74162779999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJoc-uNwC1RIYRa-M22GaGstc",
+      "provider_id": "/g/11mz57fy2w",
+      "rating": 5,
+      "reviews": 35,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "unclaimed_listing": true,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "411 Brazos St APT 101, Austin, TX 78701",
+      "country": "United States",
+      "extensions": [
+        {
+          "service_options": [
+            "Onsite services",
+            "Dine-in"
+          ]
+        },
+        {
+          "popular_for": [
+            "Solo dining"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true
+      },
+      "user_review": "\"Perfect blend of roasted coffee beans and ingredients.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGaIwhYv7x88mEO6R1P-QzJUO8kaRTxC2-yqpok2Uw4e3yV-88juLjjiywrC_PYudX0j_oUSe7QYFiRzLIG2mG8dc0dNqU7xUlXXURklM2Eb7NkIa0xefq1ejvsklHcLLIqTsqzsASNSqzE=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/6dJXE3icHcRLjoIwAADQE1UKTqQxcUEMIhNEPtbAyjClA7aFUgvyuaRrb2PiW7z3q-77Tm8NQ9TrVSVlJeig6YPItqdtvyKyMapOA6KBNpwojLnjFf5Y5097Qqhxz5vEjEC8_OIz4kVymfYWmFUnuYXHH7qerwAhNgSM3efxsb9F-VBmkN0kTqkd54d7sgS-ZzUeKgksQ4XtCYsswwkXJ8v9s0PuF3Ci_8qk7Km5OJIg8NVFq0U7aZiqxd2NJoQQ1N8JaD-0AUhP"
+    },
+    {
+      "position": 11,
+      "title": "Fleet Coffee",
+      "place_id": "ChIJRV2c1M61RIYR7nHB1em5jCc",
+      "data_id": "0x8644b5ced49c5d45:0x278cb9e9d5c171ee",
+      "data_cid": "2849857078183424494",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b5ced49c5d45%3A0x278cb9e9d5c171ee&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b5ced49c5d45%3A0x278cb9e9d5c171ee&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.262752799999998,
+        "longitude": -97.7143007
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJRV2c1M61RIYR7nHB1em5jCc",
+      "provider_id": "/g/11bc8d7f96",
+      "rating": 4.7,
+      "reviews": 606,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "2427 Webberville Rd, Austin, TX 78702",
+      "country": "United States",
+      "open_state": "Closed · Opens 7 AM Sun",
+      "hours": "Closed · Opens 7 AM Sun",
+      "operating_hours": {
+        "saturday": "7 AM–1:30 PM",
+        "sunday": "7 AM–1:30 PM",
+        "monday": "7 AM–1:30 PM",
+        "tuesday": "7 AM–1:30 PM",
+        "wednesday": "7 AM–1:30 PM",
+        "thursday": "7 AM–1:30 PM",
+        "friday": "7 AM–1:30 PM"
+      },
+      "phone": "(512) 212-7174",
+      "website": "http://www.fleetcoffee.com/",
+      "description": "Cozy spot for java & light bites. Petite cafe serving classic & inventive coffee drinks, plus local tacos & pastries.",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Beer",
+            "Cocktails",
+            "Coffee"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Bar onsite",
+            "Restroom",
+            "Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "College students"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed",
+            "Dogs allowed inside",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": false
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFiYzhkN2Y5NhgAOgMI8A0%3D&g2lbs=AEzIGDsqHbG_wNObtD3dQpXeiVsHk6DKQTo0R1aMqpvobpkdhitmfM7GUV8DDpgO0zK1Ta_3zp65&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=uT5AavGoJaCCxc8PwuTM-As&ei=uT5AavGoJaCCxc8PwuTM-As&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Excellent cold brew, super friendly staff, and a lovely patio.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHRMSa0WmX7cYWnvnDVcf8zFFgjPRxAkZ34hcE3rt_1RLcHtSIA3Eei0Lwt63vN6mB6DSTI5F19za4wIVLV48O70NyJxWC5435YwgaclM5dZMm3VVDjdO0_ugRzrvAiJgHfyDLb=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/2He9AHicHcRLDoIwFADAEwElBfwkLqpIwAAqmKJuDD6xiFAMLR-5oGfwNibOYr6fXMqXmGtamWOV1TUrs1ZkDdRcZlyqUFcaewkFhCI0sgv3T-JGQZyipDpO4JTwjtsU7tPRcVixiwbyPGMjhzVu5EWPfHBl7BG8zh7I76WFu9CqlpYdHzzT0WdjavQe9akx3U5Q-N4Myco0sHnqWQplYN7OQYUptYvbFl1aFo1NRx4b5t7ftn9d9DpCSMn_g8J_5LVDUA"
+    },
+    {
+      "position": 12,
+      "title": "Revolución",
+      "place_id": "ChIJm7dmODm1RIYRxJxeTfOluSM",
+      "data_id": "0x8644b5393866b79b:0x23b9a5f34d5e9cc4",
+      "data_cid": "2574271126412631236",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b5393866b79b%3A0x23b9a5f34d5e9cc4&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b5393866b79b%3A0x23b9a5f34d5e9cc4&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.2643936,
+        "longitude": -97.7413723
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJm7dmODm1RIYRxJxeTfOluSM",
+      "provider_id": "/g/11p_0bdqb7",
+      "rating": 4.4,
+      "reviews": 478,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Juice shop",
+        "Restaurant",
+        "Vegan restaurant",
+        "Vegetarian restaurant"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "juice_shop",
+        "restaurant",
+        "vegan_restaurant",
+        "vegetarian_restaurant"
+      ],
+      "address": "207 San Jacinto Blvd Ste 200, Austin, TX 78701",
+      "country": "United States",
+      "open_state": "Open · Closes 7 PM",
+      "hours": "Open · Closes 7 PM",
+      "operating_hours": {
+        "saturday": "7 AM–7 PM",
+        "sunday": "7 AM–7 PM",
+        "monday": "7 AM–7 PM",
+        "tuesday": "7 AM–7 PM",
+        "wednesday": "7 AM–7 PM",
+        "thursday": "7 AM–7 PM",
+        "friday": "7 AM–7 PM"
+      },
+      "phone": "(512) 738-3112",
+      "website": "http://www.revolucionsa.com/",
+      "description": "Cozy eatery serving organic breakfast staples such as granola bowls and breakfast tacos, plus coffee, juice and smoothies.",
+      "extensions": [
+        {
+          "from_the_business": [
+            "Identifies as Latino-owned",
+            "Identifies as women-owned"
+          ]
+        },
+        {
+          "service_options": [
+            "Outdoor seating",
+            "No-contact delivery",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Healthy options",
+            "Organic dishes",
+            "Prepared foods",
+            "Quick bite",
+            "Small plates",
+            "Vegan options",
+            "Vegetarian options"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Dinner",
+            "Catering",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly",
+            "Groups",
+            "LGBTQ+ friendly",
+            "Tourists",
+            "Transgender safespace"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking",
+            "Paid street parking",
+            "Usually somewhat difficult to find a space"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "no_contact_delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFwXzBiZHFiNxgAOgMI8A0%3D&g2lbs=AEzIGDuIMUn3TsvosoK_lUfIJ7ZixP0TpdijtoEPmtV9hWl2Hc-U2tNnZ1X2ZXwWPCrfoKbkDRdX&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=uT5AavGoJaCCxc8PwuTM-As&ei=uT5AavGoJaCCxc8PwuTM-As&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"The coffee was amazing, service was great, and the atmosphere was laid back\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHmwLDrIk28s3i5VXyGKbA0qVlxAo4GihwIhsZ362y7_1tvH2GskhaIv6pyCE1sRHJ9OF5KYl0R9bRrotqM29PVJdo6rAZVlzcLJ1KEvm32-RLvhdEe5UDFOzQi1BvzyhmAWEF6=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/vSGXM3icHcTbboIwGADgJ6q0RZgs2UWnnPFEMnTeLLMSSigU-WsZvKDPsLdZsu_i-30KrXt4tSwp7EWlVCXLB5QDV50uO73gqrWqHhAHBBY77I4Ni9ox2wxxQ1dg105xnsL0yvC9kD9MLcNajLGAi-3S6eWLaBPREBrxHRu3n9Y-gTxKvH3gpJ8S5941H5S-b6l3KJKbcgd2KeTMs4SkvmltivLMiJtfOh-bYD8fa_Ju5km07OQH7ttIMMZI_M9R9wcm5kPR"
+    },
+    {
+      "position": 13,
+      "title": "Cherrywood Coffeehouse",
+      "place_id": "ChIJscwUlfO1RIYRmKPeAAr1Zts",
+      "data_id": "0x8644b5f39514ccb1:0xdb66f50a00dea398",
+      "data_cid": "15809592965243773848",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b5f39514ccb1%3A0xdb66f50a00dea398&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b5f39514ccb1%3A0xdb66f50a00dea398&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.293563199999998,
+        "longitude": -97.7160212
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJscwUlfO1RIYRmKPeAAr1Zts",
+      "provider_id": "/m/0l58ylf",
+      "rating": 4.5,
+      "reviews": 2406,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Beer garden",
+        "Breakfast restaurant",
+        "Brunch restaurant",
+        "Cafe",
+        "Restaurant",
+        "Hamburger restaurant",
+        "Taco restaurant"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "beer_garden",
+        "breakfast_restaurant",
+        "brunch_restaurant",
+        "cafe",
+        "restaurant",
+        "hamburger_restaurant",
+        "taco_restaurant"
+      ],
+      "address": "1400 E 38th 1/2 St, Austin, TX 78722",
+      "country": "United States",
+      "open_state": "Open · Closes 10 PM",
+      "hours": "Open · Closes 10 PM",
+      "operating_hours": {
+        "saturday": "7 AM–10 PM",
+        "sunday": "7 AM–9 PM",
+        "monday": "7 AM–9 PM",
+        "tuesday": "7 AM–9 PM",
+        "wednesday": "7 AM–9 PM",
+        "thursday": "7 AM–9 PM",
+        "friday": "7 AM–9 PM"
+      },
+      "phone": "(512) 538-1991",
+      "website": "https://cherrywoodcoffeehouse.com/",
+      "description": "Chill cafe for eclectic eats & free yoga. Eclectic eats from tacos to muffalettas in an art-adorned counter-serve cafe, plus free yoga.",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Fast service",
+            "Great beer selection",
+            "Great coffee",
+            "Great dessert",
+            "Great tea selection",
+            "Live music",
+            "Serves local specialty",
+            "Sports"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Lunch",
+            "Dinner",
+            "Solo dining"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Alcohol",
+            "Beer",
+            "Coffee",
+            "Comfort food",
+            "Halal food",
+            "Happy hour drinks",
+            "Healthy options",
+            "Late-night food",
+            "Organic dishes",
+            "Quick bite",
+            "Small plates",
+            "Vegan options",
+            "Vegetarian options",
+            "Wine"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Dinner",
+            "Catering",
+            "Counter service",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Bar onsite",
+            "Restroom",
+            "Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "College students",
+            "Family-friendly",
+            "Groups",
+            "LGBTQ+ friendly",
+            "Tourists",
+            "Transgender safespace"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids",
+            "High chairs",
+            "Kids' menu"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Free street parking",
+            "Paid street parking",
+            "Usually plenty of parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": true
+      },
+      "user_review": "\"The coffee is rich and flavorful, and the pastries are fresh and delicious.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGgVbkvj4LQlUqvHDBedG6rqDZtg3d-vUA7Rbp_MbkkQ2D1z6cDmgKcvuuNjhGiPYKI2vSlPEEkQtgCCVxOdiQPY-LgbxSYT5hqxELeQHyUFnksJp_cbDc6PN1LWn1w8dvHHabYyg=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/qNrzwnicHcTdboIwGADQJ6qAP8ws2QWzDDaRtSoavDG2NF-1WMCWinvDPYJvs2Tn4jx_pbWtefW8Wk5G0DRQi96IG2-0FdqOeHP1oDWIG2S8iORURQnsmHKXaUbronMpfhdVEt46fLAwqZAropc1a48rphQd4-An5PgKS-76Pr_I5EzK5efYbWoSx4paWCx2w3d1pqREGbBhU25nshviTND0UXxoZb7aI2eYhyQPsr0O7vPKpemJlQ94uwe-7yP5P0f6D1ioRp0"
+    },
+    {
+      "position": 14,
+      "title": "Bennu Coffee",
+      "place_id": "ChIJDbXf03G1RIYROhj9Cwwv600",
+      "data_id": "0x8644b571d3dfb50d:0x4deb2f0c0bfd183a",
+      "data_cid": "5614633089234704442",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b571d3dfb50d%3A0x4deb2f0c0bfd183a&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b571d3dfb50d%3A0x4deb2f0c0bfd183a&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.279812,
+        "longitude": -97.7196223
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJDbXf03G1RIYROhj9Cwwv600",
+      "provider_id": "/g/1tdqhw72",
+      "rating": 4.5,
+      "reviews": 1491,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Espresso bar"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "espresso_bar"
+      ],
+      "address": "2001 E Martin Luther King Jr Blvd, Austin, TX 78702",
+      "country": "United States",
+      "open_state": "Open 24 hours",
+      "hours": "Open 24 hours",
+      "operating_hours": {
+        "saturday": "Open 24 hours",
+        "sunday": "Open 24 hours",
+        "monday": "Open 24 hours",
+        "tuesday": "Open 24 hours",
+        "wednesday": "Open 24 hours",
+        "thursday": "Open 24 hours",
+        "friday": "Open 24 hours"
+      },
+      "phone": "(512) 478-4700",
+      "website": "http://www.bennucoffee.com/",
+      "description": "Chill, eco-friendly cafe open 24/7. Relaxed 24-hour coffee house serving sustainable, fair trade coffee & locally sourced food.",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great dessert",
+            "Great tea selection",
+            "Serves local specialty"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Late-night food",
+            "Prepared foods",
+            "Quick bite",
+            "Vegan options",
+            "Vegetarian options"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Lunch",
+            "Dinner",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Gender-neutral restroom",
+            "Restroom",
+            "Wi-Fi",
+            "Paid Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Quiet",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "College students",
+            "Family-friendly",
+            "Groups",
+            "LGBTQ+ friendly"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids",
+            "High chairs",
+            "Kids' menu"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Free street parking",
+            "Paid parking lot",
+            "Paid street parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed",
+            "Dogs allowed inside",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": true
+      },
+      "user_review": "\"The coffee was excellent, and the staff was incredibly welcoming.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJRV3KJ1P4AwvFwkE4c5vaAYxUjGyGaeT_T6TiZIQAw6XxSiR4MaixPm-tAD8XI_vGdDKDHStK__tLIZC4PirEmrVoK2C_K5lamyosp3v9-9ddCwx2mNq3M7xYqWGPWRLlfXVa=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/pjsPP3icHcRBjoIwAADAF1VQ0FUTDw0oi1VTERG9NE1hgZVSpJWWF_oGf2PiHOb9KpVq5dKy6tIZFUIUdf6UecdEo_JGjZjgVtFKwCSQFsSH4x1utlHioO0Yu1D3G31fu2zaU3g15_9gCGgek3gWV7fwCPUsNacqcve0MpgDBf15GpI-yHzk_54UIkTtwpvn4qpb8y4RaOIRNK0pH4RsnX4BFlnmaTPhh4ez_zHXxyXAl2hX_6UJXemxbdug_M5A8wEvykSG"
+    },
+    {
+      "position": 15,
+      "title": "Odd Roots Coffee",
+      "place_id": "ChIJSeWfr1mzRIYRPXKJ9czzSRU",
+      "data_id": "0x8644b359af9fe549:0x1549f3ccf589723d",
+      "data_cid": "1534025209714668093",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b359af9fe549%3A0x1549f3ccf589723d&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b359af9fe549%3A0x1549f3ccf589723d&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.1502324,
+        "longitude": -97.7665839
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJSeWfr1mzRIYRPXKJ9czzSRU",
+      "provider_id": "/g/11xrgyf992",
+      "rating": 4.8,
+      "reviews": 94,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "9600 Old Lockhart Rd, Austin, TX 78747",
+      "country": "United States",
+      "open_state": "Closed · Opens 8 AM Sun",
+      "hours": "Closed · Opens 8 AM Sun",
+      "operating_hours": {
+        "saturday": "8 AM–3 PM",
+        "sunday": "8 AM–3 PM",
+        "monday": "7 AM–3 PM",
+        "tuesday": "7 AM–3 PM",
+        "wednesday": "7 AM–3 PM",
+        "thursday": "7 AM–3 PM",
+        "friday": "7 AM–3 PM"
+      },
+      "phone": "(512) 703-0533",
+      "website": "https://oddrootscoffee.com/",
+      "extensions": [
+        {
+          "from_the_business": [
+            "Identifies as Latino-owned",
+            "Identifies as women-owned",
+            "Small business"
+          ]
+        },
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Solo dining"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Quick bite"
+          ]
+        },
+        {
+          "dining_options": [
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly",
+            "LGBTQ+ friendly",
+            "Transgender safespace"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Kids' menu"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "On-site parking",
+            "Usually plenty of parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": false
+      },
+      "user_review": "\"The staff were extremely friendly and the coffee was tasty.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGVursCYdtNBhIW9NRxAKbNp5ooZtjCKQRTMzUAvGuY6hESmtKwadlaL1_FNywnCDKtGGcDIH4CVerRRPy-SNYelNedS8N073wpuYNRuRl5cvrfHsQRCbYeIxyQCzTHawlfQK-sMZbeEEm2=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/6GKxc3icHcTBboIwGADgJ6qgzjmX7MAqA9L5xxbnUi8LlErjCiW0teJL7ry3WbLv8P3-KOcG-xxFWi1nrTGtlt7KUZjeyd7NhOmidrBIWGSjZA_0O8mOfrSYNw5eVfG5AXZLSA3DypiTu2BC2WF3_0iumeePKi07R0LV6Op9_vUGU-jxlrgsE9sif8BHOTK2n1AJXGqQTfkE8XoZBs-BeaZX4jqec0sZrrksbhPF90NeBX2mBNndqZZp2i1ewjyOY6T-F6j_AxFESIo"
+    },
+    {
+      "position": 16,
+      "title": "Noble Joe Coffee Co.",
+      "place_id": "ChIJHaKo_Ne1RIYRVe0vtF_aNMs",
+      "data_id": "0x8644b5d7fca8a21d:0xcb34da5fb42fed55",
+      "data_cid": "14642568393068113237",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b5d7fca8a21d%3A0xcb34da5fb42fed55&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b5d7fca8a21d%3A0xcb34da5fb42fed55&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.245268799999998,
+        "longitude": -97.72896109999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJHaKo_Ne1RIYRVe0vtF_aNMs",
+      "provider_id": "/g/11sfqqnrp6",
+      "rating": 4.8,
+      "reviews": 390,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "Southshore Eatery Food Truck Park, 1620 E Riverside Dr, Austin, TX 78741",
+      "country": "United States",
+      "open_state": "Closed · Opens 8 AM Sun",
+      "hours": "Closed · Opens 8 AM Sun",
+      "operating_hours": {
+        "saturday": "8 AM–2 PM",
+        "sunday": "8 AM–2 PM",
+        "monday": "7 AM–2 PM",
+        "tuesday": "7 AM–2 PM",
+        "wednesday": "7 AM–2 PM",
+        "thursday": "7 AM–2 PM",
+        "friday": "7 AM–2 PM"
+      },
+      "website": "https://www.noblejoe.co/",
+      "description": "Restored 1940s coffee truck providing drinks, breakfast, and tacos in a dog-friendly courtyard.",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Vegetarian options"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Quiet",
+            "Trendy"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Free street parking",
+            "Paid parking lot",
+            "Paid street parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed inside",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": true
+      },
+      "user_review": "\"Can’t beat the amazing coffee, friendly staff, and prime location.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4_PgY--iMI78dr4w2ruj3xjSe9lz19dxka8J6kzYnkxueFOW0jE7qroyXkUyIG5d5wh_rPRV_H8UYWYS8xBaXc89YX_-uxElhxH9dmwPFPqzQzb8E6eE0Gm7wpU82F0avnmSzfYihTs_K=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/dBKROXicHcTNToMwAADgJ-rofikmHmYCYxq1E3H01GCpdBRa1oLt-pKefRsTv8P3-yOmabR3UdSL9aLVuu35bLlhWk1cTQumh6gdLWAW2GiPX05yn28obgkAl-djjBqzcSszd2vfFTzpwzJpvKzR404GoqSfefZ6hl0aX42-VbK8HQ_bZusENfjtg-aoJGdSIP9QVwwlpKJg9mkvfJ40g8MZvoZT-ETpjqfwMMRuLNEqg_W3GorwRS7i3dKne7eEEALxPwPqD9N5SEk"
+    },
+    {
+      "position": 17,
+      "title": "Simona's Coffee + Cocktails",
+      "place_id": "ChIJy1qscIi1RIYR_QWMX1qsnnk",
+      "data_id": "0x8644b58870ac5acb:0x799eac5a5f8c05fd",
+      "data_cid": "8763631429059610109",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b58870ac5acb%3A0x799eac5a5f8c05fd&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b58870ac5acb%3A0x799eac5a5f8c05fd&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.2380683,
+        "longitude": -97.7560711
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJy1qscIi1RIYR_QWMX1qsnnk",
+      "provider_id": "/g/11qzfhsjs9",
+      "rating": 4.6,
+      "reviews": 221,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Bar"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "bar"
+      ],
+      "address": "2510 S Congress Ave, Austin, TX 78704",
+      "country": "United States",
+      "open_state": "Open · Closes 11 PM",
+      "hours": "Open · Closes 11 PM",
+      "operating_hours": {
+        "saturday": "7 AM–11 PM",
+        "sunday": "7 AM–10 PM",
+        "monday": "7 AM–10 PM",
+        "tuesday": "7 AM–10 PM",
+        "wednesday": "7 AM–10 PM",
+        "thursday": "7 AM–11 PM",
+        "friday": "7 AM–11 PM"
+      },
+      "phone": "(512) 220-1795 ext. 507",
+      "website": "http://www.coltonhousehotel.com/",
+      "description": "Sophisticated spot for coffee and cocktails plus snacks, with a relaxed vibe.",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Bar games",
+            "Fast service",
+            "Great cocktails",
+            "Live music",
+            "Live performances"
+          ]
+        },
+        {
+          "popular_for": [
+            "Solo dining"
+          ]
+        },
+        {
+          "accessibility": [
+            "Assistive hearing loop",
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Alcohol",
+            "Beer",
+            "Cocktails",
+            "Food",
+            "Food at bar",
+            "Happy hour drinks",
+            "Hard liquor",
+            "Wine"
+          ]
+        },
+        {
+          "dining_options": [
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Gender-neutral restroom",
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Quiet",
+            "Romantic",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Groups",
+            "LGBTQ+ friendly",
+            "Tourists",
+            "Transgender safespace"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Paid parking garage",
+            "Paid parking lot",
+            "Usually plenty of parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": false
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFxemZoc2pzORgCOgMI8A0%3D&g2lbs=AEzIGDvilUCxDcKtqKXhQIOBu5nG7pZTdAWYRecbsyqu2HDNZuOn1sPtPsVuyGY95nEyDoVhKYOs&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=uT5AavGoJaCCxc8PwuTM-As&ei=uT5AavGoJaCCxc8PwuTM-As&fo_s=OA,SOE&opi=79508299&orderType=2&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"The ambiance is quite pleasant and the coffee is of exceptional quality.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHaXm1Ju3N_Im1ZwCJnkj6F81v9mCgz_6LKDEKt1juqJ-EAXX5Xx8ZYskqdDh3TlDRuXR_WtQKi9jYpNq5peXxa-5AnV0crY0Oip8jL9JQVdFMdY1od1XkAwNoTOoBUbZkyccIi9EYA9eM=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/XTIj_XicHcTNboIwAADgJ6q0IRi6ZIcqmAmKw6hruRBXGn4KbbFluL2kZ9_GZN_hez4a54x987y-8Re11nUvJituXCsnlFtwPXi1sYBbYD3ymeWSxB9XOqBk8rNyO6BiXidKdstNiH7wsK7_yuUujeLUoW4aExATSgN6Dwtm5VhFjX_qo-NEj-WXy9MWd8xkY2AEvV9BQNQF8huDh9aE3Q4n-aXa7CuGdIWoJHOmTwe9On8X8pfzbYtjRrDYv88IQgia_zlQL2FpRuI"
+    },
+    {
+      "position": 18,
+      "title": "Better Half Coffee & Cocktails",
+      "place_id": "ChIJAZKGeRS1RIYRebMjcJtuk9A",
+      "data_id": "0x8644b51479869201:0xd0936e9b7023b379",
+      "data_cid": "15029477995345851257",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b51479869201%3A0xd0936e9b7023b379&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b51479869201%3A0xd0936e9b7023b379&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.271299799999998,
+        "longitude": -97.75859319999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJAZKGeRS1RIYRebMjcJtuk9A",
+      "provider_id": "/g/11f4m89dqd",
+      "rating": 4.4,
+      "reviews": 1802,
+      "price": "$10–30",
+      "extracted_price": 10,
+      "type": "Cafe",
+      "types": [
+        "Cafe",
+        "Cocktail bar",
+        "Restaurant"
+      ],
+      "type_id": "cafe",
+      "type_ids": [
+        "cafe",
+        "cocktail_bar",
+        "restaurant"
+      ],
+      "address": "406 Walsh St, Austin, TX 78703",
+      "country": "United States",
+      "open_state": "Open · Closes 11 PM",
+      "hours": "Open · Closes 11 PM",
+      "operating_hours": {
+        "saturday": "8 AM–11 PM",
+        "sunday": "8 AM–8 PM",
+        "monday": "8 AM–3 PM",
+        "tuesday": "8 AM–10 PM",
+        "wednesday": "8 AM–10 PM",
+        "thursday": "8 AM–10 PM",
+        "friday": "8 AM–11 PM"
+      },
+      "phone": "(512) 645-0786",
+      "website": "http://www.betterhalfbar.com/",
+      "description": "Global fare, coffee, and cocktails. Cafe with globally inspired fare, plus coffee, draft cocktails, wine, craft ciders, and beer.",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Fast service",
+            "Great beer selection",
+            "Great coffee",
+            "Serves local specialty"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Lunch",
+            "Dinner",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Alcohol",
+            "Beer",
+            "Cocktails",
+            "Coffee",
+            "Comfort food",
+            "Happy hour drinks",
+            "Happy hour food",
+            "Hard liquor",
+            "Healthy options",
+            "Late-night food",
+            "Quick bite",
+            "Small plates",
+            "Vegan options",
+            "Vegetarian options",
+            "Wine"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Dinner",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Bar onsite",
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trending",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly",
+            "Groups",
+            "LGBTQ+ friendly",
+            "Tourists",
+            "Transgender safespace"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids",
+            "High chairs"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Free street parking",
+            "Paid parking lot",
+            "Paid street parking",
+            "Usually plenty of parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed",
+            "Dogs allowed inside",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFmNG04OWRxZBgAOgMI8A0%3D&g2lbs=AEzIGDtgJO2tXOYY8hSuaSFDE2RYulVShgCvYmkAqrX5R4wYNHxcHKni-VW6IU4eIxzxSBfZLvpC&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=uT5AavGoJaCCxc8PwuTM-As&ei=uT5AavGoJaCCxc8PwuTM-As&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"The coffee is top-notch, made with high-quality beans and expertly brewed.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAELUkZdWqyOrNeAvRBz_j2m8uWBMBUTcDmFhkRflTo6jZ3hmItlveC33zm3OhlTSWNggCsVF9Nlob-aKLlm215Mnsl8JoF--CvVHcR_ympSsUHc53KO1w9W2YKy7Htu6-FqUDo=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/exaTjHicHcRJDoIwAADAF5WtEcXEA6AEBUFZJHohWmsbaSnagsEH-gd_Y-Ic5vuhSnVyruuMQo0IQRjuJX4i0SrcKg0JrpNOAiSB1N1dsm_cVVw2p2v1GNNngt0h89713eKzvvK2XlmgJQ9ok91YIez7CVK-VmzAPoRvDlPKirxKCPHlIXASJi7gHMWMW-Zk20o224gAAH84hCirR97lsgzRBEap-XIq6xiN01D1Ngge5VIsXqZhGID-R6D9AVy3RFs"
+    },
+    {
+      "position": 19,
+      "title": "Idlewild Coffee",
+      "place_id": "ChIJZfoTcuy1RIYRuMhexzgIBPo",
+      "data_id": "0x8644b5ec7213fa65:0xfa040838c75ec8b8",
+      "data_cid": "18015533449344895160",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644b5ec7213fa65%3A0xfa040838c75ec8b8&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644b5ec7213fa65%3A0xfa040838c75ec8b8&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.2769247,
+        "longitude": -97.74238109999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJZfoTcuy1RIYRuMhexzgIBPo",
+      "provider_id": "/g/11vby76mdv",
+      "rating": 4.8,
+      "reviews": 95,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "1400 Lavaca St, Austin, TX 78701",
+      "country": "United States",
+      "open_state": "Closed · Opens 8 AM Mon",
+      "hours": "Closed · Opens 8 AM Mon",
+      "operating_hours": {
+        "saturday": "Closed",
+        "sunday": "Closed",
+        "monday": "8 AM–3 PM",
+        "tuesday": "8 AM–3 PM",
+        "wednesday": "8 AM–3 PM",
+        "thursday": "8 AM–3 PM",
+        "friday": "8 AM–3 PM"
+      },
+      "website": "http://idlewildcoffee.com/",
+      "description": "Coffee bar in the SXSW Headquarters serving espresso and quick bites in a trendy space.",
+      "extensions": [
+        {
+          "service_options": [
+            "Curbside pickup",
+            "No-contact delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Fast service",
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Alcohol",
+            "Coffee"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert"
+          ]
+        },
+        {
+          "amenities": [
+            "Bar onsite",
+            "Restroom",
+            "Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Quiet",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Locals"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "parking": [
+            "Usually plenty of parking"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "curbside_pickup": true,
+        "no_contact_delivery": true
+      },
+      "user_review": "\"The coffee is delicious and the baristas are so helpful and friendly!\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE30qJfkeo6zpDDTIz8fsT6DfLxPX3HHg5LseoZYL5Plo-qCZ36uCXzvKjn3RyvZFIxON1ifsk1G4mgTmO_wt8GOWny_0dLh2O2p2GdKWkQIyMItN4Ea26zI3zBA_ujyAIx6AQ=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/TaP9D3icHcRdDoIgAADgE5EoxVpbD5RllPnT3CpfXDPEUsECSzlgd-g2bX0P3_dTat2qmWXVJRpxKXnNOsWeuRSaCT3KZWPxVoFcAWWRKIgrskLwsS0qJrFpXTehZlqoBLuF30cntNnwia-YTM_-JKoleCxThLvlybx2d4EOwytd0z4M7FuhKtsbNzxpwuytp154FEMGr37phE7reNfdsYrpsKc6GK8uDjYUmQXJuvtAaI9JPH_bEEJQ_s-B-AEM5UP8"
+    },
+    {
+      "position": 20,
+      "title": "Monkey Nest Coffee",
+      "place_id": "ChIJ0zs2zVjKRIYRuP3X3KCjGOM",
+      "data_id": "0x8644ca58cd363bd3:0xe318a3a0dcd7fdb8",
+      "data_cid": "16364009157345934776",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x8644ca58cd363bd3%3A0xe318a3a0dcd7fdb8&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x8644ca58cd363bd3%3A0xe318a3a0dcd7fdb8&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 30.327721,
+        "longitude": -97.7395827
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ0zs2zVjKRIYRuP3X3KCjGOM",
+      "provider_id": "/g/1v3lqbhr",
+      "rating": 4.4,
+      "reviews": 1874,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "5353 Burnet Rd, Austin, TX 78756",
+      "country": "United States",
+      "open_state": "Open · Closes 7 PM",
+      "hours": "Open · Closes 7 PM",
+      "operating_hours": {
+        "saturday": "7 AM–7 PM",
+        "sunday": "8 AM–7 PM",
+        "monday": "7 AM–7 PM",
+        "tuesday": "7 AM–7 PM",
+        "wednesday": "7 AM–7 PM",
+        "thursday": "7 AM–7 PM",
+        "friday": "7 AM–7 PM"
+      },
+      "phone": "(512) 505-8033",
+      "website": "http://monkeynestcoffee.com/",
+      "description": "Neighborhood WiFi cafe with live music. Artsy hangout serving fair-trade coffee & healthy eats in a large space with free WiFi & live music.",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "No-contact delivery",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great dessert",
+            "Great tea selection",
+            "Live music",
+            "Live performances",
+            "Serves local specialty"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Lunch",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Healthy options",
+            "Late-night food",
+            "Organic dishes",
+            "Quick bite",
+            "Small plates",
+            "Vegan options",
+            "Vegetarian options"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Bar onsite",
+            "Restroom",
+            "Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Quiet",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "College students",
+            "Groups",
+            "Tourists"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "High chairs"
+          ]
+        },
+        {
+          "parking": [
+            "Free parking lot",
+            "Free street parking",
+            "Paid parking lot",
+            "Usually plenty of parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "no_contact_delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EiUKI-ICIDIeEhciFdLX29IPDwoLL2cvMXYzbHFiaHIYADoDCPAN&g2lbs=AEzIGDu9P2TYEKjP-IQGJaKF-sIJaodSFNwMlSF4pb-dinzx78Vo44D5TyyC2xoa0zSYGKghmZHO&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=uT5AavGoJaCCxc8PwuTM-As&ei=uT5AavGoJaCCxc8PwuTM-As&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Excellent coffee in a sweet, charming atmosphere.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEOnQ6k8svPRIUf18I4gpdfDHTqkkxz6yRWKYBkCfMlidluGhuPJdZwnkxTwTJFbffGGLQNsJLP1SP40NzBJa9mkYGNOJFguDS_SHSrj-upEKq9_zmgfWw-sWFyTlXpHx5j-b8t=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/BiYqOXicHcRJDoIwAADAF1UgLgETD24sVbEIBvViFGjRllJtK8gHfYO_MXEO8_2USgk5NgxW9nukrgkrtCyeWc1VwVUvqyuDCAkyCaQxRWFEp8stj0bUli-0C_bYsoMBETle-MmD0rYbvXfp6jijc7xht5xpr9QI5qeG0zZpEuheMfa8dRRKuEZWjAZm2M3gxano0Qu30CV6EZ9jP37egRbL1cM5dxXBaQNk6r4TdhB-O7yDq60mjWWaJij_Z4D_AL6tRdU"
+    }
+  ],
+  "serpapi_pagination": {
+    "next": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&q=coffee+in+austin&start=40&type=search",
+    "current": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&q=coffee+in+austin&start=20&type=search",
+    "previous": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&q=coffee+in+austin&start=0&type=search"
+  }
+}

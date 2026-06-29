@@ -1,0 +1,428 @@
+{
+  "search_metadata": {
+    "id": "6a403e48231ffe2b67db094f",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/sav79dm8bL2HdobxxykNGA/6a403e48231ffe2b67db094f.json",
+    "created_at": "2026-06-27 21:19:04 UTC",
+    "processed_at": "2026-06-27 21:19:04 UTC",
+    "google_local_url": "https://www.google.com/search?q=coffee+in+austin&hl=en&gl=us&udm=1",
+    "raw_html_file": "https://serpapi.com/searches/sav79dm8bL2HdobxxykNGA/6a403e48231ffe2b67db094f.html",
+    "total_time_taken": 17.06
+  },
+  "search_parameters": {
+    "engine": "google_local",
+    "q": "coffee in austin",
+    "google_domain": "google.com",
+    "hl": "en",
+    "gl": "us",
+    "device": "desktop"
+  },
+  "local_map": {
+    "gps_coordinates": {
+      "latitude": 30.271521387805628,
+      "longitude": -97.75222778320312
+    }
+  },
+  "local_results": [
+    {
+      "position": 1,
+      "rating": 4.7,
+      "reviews": 4300,
+      "reviews_original": "(4.3K)",
+      "price": "$20–30",
+      "description": "\"Coffee drinks are on tap so lightning fast service.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/Xniw4A3KOCyMaRNEq1S2Zp9Pc5HrgzRc4ZeWJp6hc88.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFFwf09vg-A-UOTFEXwqzY86hPNqihai0caf3IThGnGyi5XEpI-dBfyfCyCj7Q1P7OKctBni9H0ybZhH1SDkVloB0AEu_sYxVA3rfKuROVQq_cCjbAcIHGUxpo1UIdS2JFrdVKw=w1000-h1000-c-n",
+      "place_id": "12692675342084089429",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=12692675342084089429&q=coffee+in+austin",
+      "provider_id": "/g/11f3mbb3st",
+      "gps_coordinates": {
+        "latitude": 30.226957,
+        "longitude": -97.762494
+      },
+      "title": "Cosmic Pickle",
+      "type": "Coffee shop",
+      "address": "121 Pickle Rd"
+    },
+    {
+      "position": 2,
+      "rating": 4.5,
+      "reviews": 11000,
+      "reviews_original": "(11K)",
+      "price": "$10–20",
+      "description": "\"The coffee and the deck vibe is super laid back and cozy in inside seating.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/NxkbxcOh-MUq0uEZpKyK8A3GZs1-rqzgvjM0fz52pWA.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFtoDrF0S1w3zI7rMbmVBNRAN6XiOPaKvThVJDpPFdaJ50FUFHh0bI7Il3cH2Age1ssmyQfORpyiXAOvqztHZUSz4B62RABZf6x4SygXZTotoPx7Hw1CVlw6qLWi7kDs4U-Fcs=w1000-h1000-c-n",
+      "place_id": "13569331606629044653",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=13569331606629044653&q=coffee+in+austin",
+      "provider_id": "/m/020z4hc",
+      "gps_coordinates": {
+        "latitude": 30.29547,
+        "longitude": -97.783951
+      },
+      "title": "Mozart's Coffee Roasters",
+      "type": "Coffee shop",
+      "address": "3825 Lake Austin Blvd"
+    },
+    {
+      "position": 3,
+      "rating": 4.5,
+      "reviews": 2500,
+      "reviews_original": "(2.5K)",
+      "price": "$1–10",
+      "description": "\"The atmosphere is nice, the people cool, and the coffee was delicious.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/b7bi4Bi-jKsRZnc2_62WMCaskXE3lui9N1KzMVY2m34.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH1QDtQO5S688UtncZgRyIYWwyUTb9p3PRg4qa3z0W6WHymWI5d-9U8jBZsoZ0l7tX50V4AumSo87ylGBZGQdNCXyxxTpbaeDGDO6ugHjo50CkZQD4FdDwnvMxOwH7gvKsh8WJ-=w1000-h1000-c-n",
+      "place_id": "140078896924485689",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=140078896924485689&q=coffee+in+austin",
+      "provider_id": "/g/1v76_180",
+      "gps_coordinates": {
+        "latitude": 30.318579,
+        "longitude": -97.724487
+      },
+      "title": "Epoch Coffee",
+      "type": "Coffee shop",
+      "address": "221 W N Loop Blvd"
+    },
+    {
+      "position": 4,
+      "rating": 4.7,
+      "reviews": 1100,
+      "reviews_original": "(1.1K)",
+      "price": "$10–20",
+      "description": "\"The vibes were great, the employees were great and the coffee tasted great!\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/wYgPXGc8UAzO8M0M0_zNZgnDD5KgmxjhtJgL6xUlXDM.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFOVyFLMqOZZCRv86Ha88tJaJS00VHHBfnDiolpBh2CutqlSthOXh_EGtZjKwPy4EmgI6iqE0FLsIFw51960I7yi3nOKNZCtl2XQriwYA3bbm4gCNVTaruKMBTuP6Nlw0b6GgjELA=w1000-h1000-c-n",
+      "place_id": "9482579683771776034",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=9482579683771776034&q=coffee+in+austin",
+      "provider_id": "/g/11c0w0sq6t",
+      "gps_coordinates": {
+        "latitude": 30.215576,
+        "longitude": -97.762455
+      },
+      "title": "Spokesman Coffee",
+      "type": "Coffee shop",
+      "address": "440 E St Elmo Rd A2"
+    },
+    {
+      "position": 5,
+      "rating": 4.5,
+      "reviews": 7200,
+      "reviews_original": "(7.2K)",
+      "price": "$10–20",
+      "description": "\"Cool jazz playing, amazing coffee, nice servers, tons of homemade options.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/8U8RH-GrXgmiO4Hsw8VC3ZZ_TraXtZgO3LiuuKB-R7Y.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGrHbSXRSqduwuG0oZaa7S-nEHGcVMMgPHo740shK3TFtMPQNrQMnM8S8SNmluEqExHj1In_3_tymqY1OGMV38x1FsRcHa3a--Tx-N3rHf8TifDQlpFuQEzCc9NDuu-kU-VH9_dbs1Rx9wt=w1000-h1000-c-n",
+      "place_id": "13514268865872437751",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=13514268865872437751&q=coffee+in+austin",
+      "provider_id": "/m/020z2tj",
+      "gps_coordinates": {
+        "latitude": 30.244456,
+        "longitude": -97.751954
+      },
+      "title": "Magnolia Cafe",
+      "type": "Cafe",
+      "address": "1920 S Congress Ave"
+    },
+    {
+      "position": 6,
+      "rating": 4.5,
+      "reviews": 1200,
+      "reviews_original": "(1.2K)",
+      "price": "$10–20",
+      "description": "\"Remarkably good latte, several vegan options, really nice staff.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/_SGzPY6QAvQadBiaICntA0LV09ZJB22OrjFAgq-tRNo.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFbtjp4r6bvUN7mZ3IijSpl4y9-o6WSoJqN-T-xWQM4j-zPmhupbyx42Ufi_xFdufYGkoqSOzDG8zCHwmFytkokrbTYobw3mah4e1IgONCNTMCa24bwGB8ES_zdgUXbCAu5ok5h=w1000-h1000-c-n",
+      "place_id": "1930358508368807625",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=1930358508368807625&q=coffee+in+austin",
+      "provider_id": "/g/1tdz57h8",
+      "gps_coordinates": {
+        "latitude": 30.264411,
+        "longitude": -97.733092
+      },
+      "title": "The Brew and Brew",
+      "type": "Coffee shop",
+      "address": "500 San Marcos St #105"
+    },
+    {
+      "position": 7,
+      "rating": 4.8,
+      "reviews": 708,
+      "reviews_original": "(708)",
+      "price": "$1–10",
+      "description": "\"... atmosphere, the owners are attentive and source amazing coffee.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/BFahoXo3Ype4FUAmSHa1m_8AQxcJUEc5TLhHRBJ5c8s.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEVWSMbta0yrgts-HzR7gBxqjhfww3_7NRIBFhn-cPhJq4fu5f5uQiLHzDDA2hgm13iCcAibGWciuECPecwyhLtqvtAaIh6cuhHpLdAUIKEWWhJvdFrv_WX_ePwKPH25v3i1KD_Rg=w1000-h1000-c-n",
+      "place_id": "4780878642469472789",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=4780878642469472789&q=coffee+in+austin",
+      "provider_id": "/g/11hzykh_z6",
+      "gps_coordinates": {
+        "latitude": 30.252963,
+        "longitude": -97.732394
+      },
+      "title": "Afuga Coffee",
+      "type": "Coffee shop",
+      "address": "31 Navasota St Ste 100"
+    },
+    {
+      "position": 8,
+      "rating": 4.8,
+      "reviews": 625,
+      "reviews_original": "(625)",
+      "price": "$10–20",
+      "description": "\"Super cozy spot with great staff and delicious coffee\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/FvftyH4ytMX3Fcfjoie2QsX-VnOCOBmTEzqJoyyBrM4.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGlGkPhQKG6MgBKxv5knl0hq_D0myGMNXguS_HK_R8PEuuECONd1iBovqy-hSAsfkGWRvIZT0XDWkgGVPEyHRstkN8BPmTx8MCJ6nUr2r7-ZwLf3d9YamioiDlj0n9KGmYGi0nnig=w1000-h1000-c-n",
+      "place_id": "10429534454174427981",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=10429534454174427981&q=coffee+in+austin",
+      "provider_id": "/g/11j1ssgp4h",
+      "gps_coordinates": {
+        "latitude": 30.274372,
+        "longitude": -97.720197
+      },
+      "title": "Dear Diary Coffee",
+      "type": "Coffee shop",
+      "address": "1212 Chicon St #103"
+    },
+    {
+      "position": 9,
+      "rating": 4.8,
+      "reviews": 15000,
+      "reviews_original": "(15K)",
+      "description": "\"The coffee was excellent and the food was delicious and served quickly.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/gJsiapgxDr7_dTXfZLgM4OchTo_Aw6Cw82JWvZCmD5U.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHo5aE0izw_umROA5zk1Tvlbvy4dItZtCt0FJ0UOYhpLG-w99Wv8d9e77unnMh3dLoWnIPa4AemqBDhcQ7GnnwKNgxBbIehRakBFj12PdZKT2QvbIDennUNqU5odX3IJvZvoM14AA=w1000-h1000-c-n",
+      "place_id": "4093074264320094839",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=4093074264320094839&q=coffee+in+austin",
+      "provider_id": "/g/11d_9jgz28",
+      "gps_coordinates": {
+        "latitude": 30.268816,
+        "longitude": -97.742298
+      },
+      "title": "Caroline",
+      "type": "Coffee shop",
+      "address": "621 N Congress Ave Suite 101"
+    },
+    {
+      "position": 10,
+      "rating": 4.8,
+      "reviews": 296,
+      "reviews_original": "(296)",
+      "price": "$1–10",
+      "description": "\"The baristas were so friendly and made us some delicious macchiatos.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/A2lMPvmoNSJGk-9rYjDFQs5wdZ1RIm7Wo6lIjiKahVg.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFxjD1f-6diajEP6IRsAbEzFOd3EGIdi_gWCGd5RQTQYEa_KydcZJ2RUzIDPKm7qtq15MojpzrZoTtjwIo8JDihw857hsnFLPaoonXdII7O7fO0OiyMSKk8o4o3Irqm55WVP6zXLg=w1000-h1000-c-n",
+      "place_id": "3230705305584083865",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=3230705305584083865&q=coffee+in+austin",
+      "provider_id": "/g/11dfgsdb_y",
+      "gps_coordinates": {
+        "latitude": 30.276506,
+        "longitude": -97.749684
+      },
+      "title": "Idlewild Coffee",
+      "type": "Coffee shop",
+      "address": "824 W 12th St"
+    },
+    {
+      "position": 11,
+      "rating": 4.5,
+      "reviews": 1200,
+      "reviews_original": "(1.2K)",
+      "price": "$1–10",
+      "description": "\"The baristas are charming and the quality of the coffee is fantastic.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/rXkPPHvYolWabSTKHjGmfi1NWaKCP3z-AhTukP6HHaQ.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8swBUqmlczMAVCCbdxKvFk--e1eSZs-LnenjbLJBZ7BFh_lcjrXQyOzbrhlOWUBgf1ziA_4B-jROT-X50uCcNDKUh9o6P6phO-HWAlR9IwSCZl0oJmOi9RhxziET29OEebUCS=w1000-h1000-c-n",
+      "place_id": "11265938073076301333",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=11265938073076301333&q=coffee+in+austin",
+      "provider_id": "/g/12hlpyx7f",
+      "gps_coordinates": {
+        "latitude": 30.266216,
+        "longitude": -97.743066
+      },
+      "title": "Houndstooth Coffee",
+      "type": "Coffee shop",
+      "address": "401 Congress Ave. #100c"
+    },
+    {
+      "position": 12,
+      "rating": 4.8,
+      "reviews": 220,
+      "reviews_original": "(220)",
+      "price": "$1–10",
+      "description": "\"staff super nice, coffee super good, and the vibes are so cool!\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/MQKHVWmvEzzFnLuHgr5MYOMfk1xNF6UFC02jzicRUC8.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcriTOTiwTKzYANOGwknxockyvpK39AcVP3KQUY9P8Za9nI61zWzU-gTsUyNpQKiMmKEWjH8rsX3Gi7Ze6dHxiqoMovyVKh4Sjnuoc4D9vEy1L_pluojyg2fQxNIrtpwHmavwl7CL5yEs=w1000-h1000-c-n",
+      "place_id": "13189394892161886121",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=13189394892161886121&q=coffee+in+austin",
+      "provider_id": "/g/11wvcs9p__",
+      "gps_coordinates": {
+        "latitude": 30.391125,
+        "longitude": -97.748747
+      },
+      "title": "Cafe du Bliss",
+      "type": "Cafe",
+      "address": "10000 Research Blvd Unit 136"
+    },
+    {
+      "position": 13,
+      "rating": 5.0,
+      "reviews": 35,
+      "reviews_original": "(35)",
+      "price": "$1–10",
+      "description": "\"Perfect blend of roasted coffee beans and ingredients.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/vJJa1R36eIE5Mrm3NXoyLxECHKYn5JG5F4_bf5MEcok.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGaIwhYv7x88mEO6R1P-QzJUO8kaRTxC2-yqpok2Uw4e3yV-88juLjjiywrC_PYudX0j_oUSe7QYFiRzLIG2mG8dc0dNqU7xUlXXURklM2Eb7NkIa0xefq1ejvsklHcLLIqTsqzsASNSqzE=w1000-h1000-c-n",
+      "place_id": "15542633040281265003",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=15542633040281265003&q=coffee+in+austin",
+      "provider_id": "/g/11mz57fy2w",
+      "gps_coordinates": {
+        "latitude": 30.266411,
+        "longitude": -97.741628
+      },
+      "title": "Cielito Lindo Cafe",
+      "type": "Coffee shop",
+      "address": "411 Brazos St APT 101"
+    },
+    {
+      "position": 14,
+      "rating": 4.9,
+      "reviews": 363,
+      "reviews_original": "(363)",
+      "price": "$1–10",
+      "description": "\"Amazing service, really excellent coffee, chill atmosphere.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/_aXZJCF7Cv363kw8PF7qZ42PO1nNZTj47zrDclUOcHg.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHKYyXNtjpeKCaJKgAP0DoUwhK21mV_4ZNeAxcmHNFg8v28aCiUfWjeNkne895IrtECJJXEIRlDCjp6D_XQdTapfXv69MKsjg09d7X1Fd-oSN_AcaadWaWdZDrv3o2svqva1SSKVdOgvIc=w1000-h1000-c-n",
+      "place_id": "18242422809832311318",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=18242422809832311318&q=coffee+in+austin",
+      "provider_id": "/g/11vrh3fl3l",
+      "gps_coordinates": {
+        "latitude": 30.362347,
+        "longitude": -97.742112
+      },
+      "title": "Flora Coffee & Culture",
+      "type": "Coffee shop",
+      "address": "3300 W Anderson Ln. Ste 300",
+      "hours": "Closed · Opens 8:30 AM Sun"
+    },
+    {
+      "position": 15,
+      "rating": 4.3,
+      "reviews": 2100,
+      "reviews_original": "(2.1K)",
+      "price": "$10–20",
+      "description": "\"The coffees were good, plenty of seating and fantastic ambiance.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/6AP336hFIMIeE8VafaLcmociQkvrueuX_fWSHuLnVqA.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGhoXGs4t2OWVZk50rg_8SuQm1x8JsKeUzgCqnym9rDQz1ziCBxxlU1xfm-8wmtYfV83D4MCi2NZKbyx1WMLKGM4KE8oj6OulAOWLifhR7hsdEYCss8aJXtB6z-UlhIFc4J87M=w1000-h1000-c-n",
+      "place_id": "34322981427933494",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=34322981427933494&q=coffee+in+austin",
+      "provider_id": "/g/1tmy5fpt",
+      "gps_coordinates": {
+        "latitude": 30.266936,
+        "longitude": -97.74572
+      },
+      "title": "Halcyon",
+      "type": "Coffee shop",
+      "address": "218 W 4th St"
+    },
+    {
+      "position": 16,
+      "rating": 4.7,
+      "reviews": 131,
+      "reviews_original": "(131)",
+      "price": "$1–10",
+      "description": "\"The coffee is consistently excellent, carefully crafted, and full of flavor.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/JM6lVk-5IHA_nxOmKANlMtOp8XiYVFqIVW0Xqx5Crt0.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF55F66fQTN00zcwNdb7oxacEcCwbihfuQiT1Xrv7v74ybb3zE7iCNgBEKThhW8SHtqwxpKw1fC2SSnbiKxOC14q7M8sICYa982KuESnr3t6AS6fmCohZvgXkMsrD9SqlHDRMjD=w1000-h1000-c-n",
+      "place_id": "10934225030906546074",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=10934225030906546074&q=coffee+in+austin",
+      "provider_id": "/g/11y1n3gfn3",
+      "gps_coordinates": {
+        "latitude": 30.306552,
+        "longitude": -97.715248
+      },
+      "title": "Figure 8 Coffee Purveyors",
+      "type": "Coffee shop",
+      "address": "4631 Airport Blvd #125"
+    },
+    {
+      "position": 17,
+      "rating": 4.3,
+      "reviews": 125,
+      "reviews_original": "(125)",
+      "price": "$10–20",
+      "description": "\"Super comfortable, amazing music, good coffee!\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/BiilWHJaQORCt9IEmmbqxSHp6H3wMfpqxfwwivsBikY.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHe91F93iPC28luRK96VGFZW4mIcGWu2gasqafFcUpb8HeDixD7i83y6BFZIpda8yqlx0sgaoG1kPW7-8ZW0ZmdIuCDEgZjkUfD5I-eo0P2UgQIbzEK9kIZz11HdbdrtNA6pTsfb9tmxs1p=w1000-h1000-c-n",
+      "place_id": "3075373729973361712",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=3075373729973361712&q=coffee+in+austin",
+      "provider_id": "/g/11vcm_jkg8",
+      "gps_coordinates": {
+        "latitude": 30.256459,
+        "longitude": -97.738838
+      },
+      "title": "Cuvee Coffee & Bar",
+      "type": "Coffee shop",
+      "address": "48 East Ave"
+    },
+    {
+      "position": 18,
+      "rating": 4.5,
+      "reviews": 574,
+      "reviews_original": "(574)",
+      "price": "$1–10",
+      "description": "\"Excellent coffee, friendly service, fast wifi, highly recommended!\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/9jNmkha7JWhkZ8Lv9cU2oZknNsGPBjhFv8qwvDI2DgE.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGOFSEpEz6mF4dqfZz8biJi36-Pe-oJVSAGEbdroW8mpbUHLOj1FcZ-kpXP7UBhL5SwFYovYsmS5FJkWoyDFJhjJ-O2Lzcebo-SixmvvV9-h-J3VvK5K_jyXiF4WkrOuYGK2UJg=w1000-h1000-c-n",
+      "place_id": "286604708458449573",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=286604708458449573&q=coffee+in+austin",
+      "provider_id": "/g/11gf1vbmvm",
+      "gps_coordinates": {
+        "latitude": 30.26757,
+        "longitude": -97.752098
+      },
+      "title": "Merit Coffee Co.",
+      "type": "Coffee shop",
+      "address": "222 West Ave #120"
+    },
+    {
+      "position": 19,
+      "rating": 5.0,
+      "reviews": 280,
+      "reviews_original": "(280)",
+      "price": "$1–10",
+      "description": "\"💎 Coffee is delicious, smooth, and fun flavors that are balanced and tasty.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/cm2iDHXWJ0TMSZ1ABqHaH8_APucwQIaU4VZW99V7Z_U.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMcU4KTuoqQJD9MCVQ9JRBEr2fA9HZa1SOeeP7ToeiyF9F0QwVl90zKDJHNh7mVHapjVQqw8Iioz3ZdOfreWEWo8470WW93ATzZMl3Ve_yKW4wvZvw0kuqGNTsFv87WM3M5IWZujyLeh2p=w1000-h1000-c-n",
+      "place_id": "13612481716647551678",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=13612481716647551678&q=coffee+in+austin",
+      "provider_id": "/g/11wqplhln0",
+      "gps_coordinates": {
+        "latitude": 30.301258,
+        "longitude": -97.738669
+      },
+      "title": "BRB Coffee",
+      "type": "Coffee shop",
+      "address": "3501 Guadalupe St"
+    },
+    {
+      "position": 20,
+      "rating": 4.7,
+      "reviews": 778,
+      "reviews_original": "(778)",
+      "price": "$1–10",
+      "description": "\"... are warm, friendly and know how to make great tasting coffee.\"",
+      "thumbnail": "https://serpapi.com/searches/6a403e48231ffe2b67db094f/images/wrNw-JC2UnEWoWsTZbzmimPZXWCFg02wwHngJ7Q0Peg.jpeg",
+      "thumbnail_large": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEsdabwTdm8G81aGdXhgaC7JQthKdd7fhMgP-LyvayiFtL0_0bIzutuuwQHBYRWEUjKYnRpP4Ix7VjDjI0I51e_Q1lRHz9yrKXKV5MW0mXMGskhtyb7Lkh1_UCZoVIhRdMC-qys5w=w1000-h1000-c-n",
+      "place_id": "1014950630859795850",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=1014950630859795850&q=coffee+in+austin",
+      "provider_id": "/g/11b5wl5rth",
+      "gps_coordinates": {
+        "latitude": 30.266936,
+        "longitude": -97.720005
+      },
+      "title": "Figure 8 Coffee Purveyors Cafe & Roastery",
+      "type": "Coffee shop",
+      "address": "1111 Chicon St"
+    }
+  ]
+}

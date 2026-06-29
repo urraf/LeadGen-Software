@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #080d1a;
+    color: #e8ecf4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4b5563;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface-900/60 backdrop-blur-xl border border-surface-700/30 rounded-2xl;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:border-brand-500/30 hover:shadow-lg hover:shadow-brand-500/5;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-400 to-brand-200 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2.5 bg-gradient-to-r from-brand-600 to-brand-500 text-white font-medium rounded-xl
+           transition-all duration-200 hover:from-brand-500 hover:to-brand-400 hover:shadow-lg hover:shadow-brand-500/25
+           active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2.5 bg-surface-800 text-surface-200 font-medium rounded-xl border border-surface-700/50
+           transition-all duration-200 hover:bg-surface-700 hover:border-surface-700/80
+           active:scale-[0.98];
+  }
+
+  .btn-danger {
+    @apply px-4 py-2.5 bg-red-500/10 text-red-400 font-medium rounded-xl border border-red-500/20
+           transition-all duration-200 hover:bg-red-500/20 hover:border-red-500/40
+           active:scale-[0.98];
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-surface-800/80 border border-surface-700/50 rounded-xl text-surface-200
+           placeholder-surface-700 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/20
+           transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider;
+  }
+}
