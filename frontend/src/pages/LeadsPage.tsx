@@ -164,6 +164,15 @@ export default function LeadsPage() {
     { key: 'instagram', label: 'Instagram', icon: '📸', color: 'text-pink-400' },
   ];
 
+  if (isLoading) {
+    return (
+      <div className="flex flex-col items-center justify-center h-[60vh] space-y-4 animate-in fade-in duration-300">
+        <div className="w-10 h-10 border-4 border-brand-500/30 border-t-brand-500 rounded-full animate-spin"></div>
+        <p className="text-surface-300 font-medium animate-pulse">Loading leads...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="animate-fade-in">
       {/* Header */}

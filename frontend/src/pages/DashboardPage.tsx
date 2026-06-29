@@ -13,7 +13,7 @@ import {
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 export default function DashboardPage() {
-  const { data: overview } = useQuery({
+  const { data: overview, isLoading: isOverviewLoading } = useQuery({
     queryKey: ['analytics-overview'],
     queryFn: async () => {
       const res = await client.get('/analytics/overview');
@@ -21,7 +21,7 @@ export default function DashboardPage() {
     },
   });
 
-  const { data: daily } = useQuery({
+  const { data: daily, isLoading: isDailyLoading } = useQuery({
     queryKey: ['analytics-daily'],
     queryFn: async () => {
       const res = await client.get('/analytics/daily?days=14');
@@ -29,13 +29,24 @@ export default function DashboardPage() {
     },
   });
 
-  const { data: campaignsData } = useQuery({
+  const { data: campaignsData, isLoading: isCampaignsLoading } = useQuery({
     queryKey: ['campaigns', 1, 5],
     queryFn: async () => {
       const res = await client.get('/campaigns?limit=5');
       return res.data;
     },
   });
+
+  const isLoading = isOverviewLoading || isDailyLoading || isCampaignsLoading;
+
+  if (isLoading) {
+    return (
+      <div className="flex flex-col items-center justify-center h-[60vh] space-y-4 animate-in fade-in duration-300">
+        <div className="w-10 h-10 border-4 border-brand-500/30 border-t-brand-500 rounded-full animate-spin"></div>
+        <p className="text-surface-300 font-medium animate-pulse">Loading dashboard metrics...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6 animate-fade-in">
