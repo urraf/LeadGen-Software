@@ -19,6 +19,10 @@ export const getLeads = catchAsync(async (req: AuthRequest, res: Response) => {
   if (req.query.city) filter.city = req.query.city as string;
   if (req.query.minScore) filter.minScore = Number(req.query.minScore);
   if (req.query.search) filter.search = req.query.search as string;
+  
+  if (req.query.hasWebsite !== undefined && req.query.hasWebsite !== 'all') {
+    filter.hasWebsite = req.query.hasWebsite === 'true';
+  }
 
   const { data, total } = await leadRepository.findAll(req.userId!, filter, page, limit);
 

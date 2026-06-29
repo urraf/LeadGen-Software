@@ -49,7 +49,7 @@ const campaignSchema = new Schema<CampaignDocument>(
     filters: {
       minRating: { type: Number, default: 3.5, min: 0, max: 5 },
       minReviews: { type: Number, default: 10, min: 0 },
-      excludeWithWebsite: { type: Boolean, default: true },
+      excludeWithWebsite: { type: Boolean, default: false },
     },
     stats: {
       totalSearched: { type: Number, default: 0 },

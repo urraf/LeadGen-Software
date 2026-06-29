@@ -8,6 +8,7 @@ export interface LeadFilter {
   city?: string;
   minScore?: number;
   search?: string;
+  hasWebsite?: boolean;
 }
 
 export class LeadRepository {
@@ -155,6 +156,17 @@ export class LeadRepository {
     }
     if (filter.search) {
       query.businessName = { $regex: filter.search, $options: 'i' };
+    }
+    if (filter.hasWebsite !== undefined) {
+      if (filter.hasWebsite) {
+        query.website = { $exists: true, $type: 'string', $ne: '' };
+      } else {
+        query.$or = [
+          { website: { $exists: false } },
+          { website: null },
+          { website: '' }
+        ];
+      }
     }
 
     return query;

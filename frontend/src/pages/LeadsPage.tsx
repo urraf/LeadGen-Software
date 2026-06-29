@@ -47,18 +47,20 @@ export default function LeadsPage() {
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
+  const [hasWebsiteFilter, setHasWebsiteFilter] = useState('all');
   const [minScore, setMinScore] = useState(0);
   const [selectedLeadId, setSelectedLeadId] = useState<string | null>(null);
   const [openDropdownId, setOpenDropdownId] = useState<string | null>(null);
   const queryClient = useQueryClient();
 
   const { data, isLoading } = useQuery({
-    queryKey: ['leads', page, search, statusFilter, minScore],
+    queryKey: ['leads', page, search, statusFilter, minScore, hasWebsiteFilter],
     queryFn: async () => {
       const params: Record<string, string | number> = { page, limit: 20 };
       if (search) params.search = search;
       if (statusFilter) params.status = statusFilter;
       if (minScore > 0) params.minScore = minScore;
+      if (hasWebsiteFilter !== 'all') params.hasWebsite = hasWebsiteFilter;
       const res = await client.get('/leads', { params });
       return res.data;
     },
@@ -220,6 +222,18 @@ export default function LeadsPage() {
               <option value="COLD">Cold</option>
             </select>
           </div>
+          <div className="w-32">
+            <label className="block text-xs font-medium text-surface-300 mb-1.5">Website</label>
+            <select
+              className="input-field"
+              value={hasWebsiteFilter}
+              onChange={(e) => { setHasWebsiteFilter(e.target.value); setPage(1); }}
+            >
+              <option value="all">Any</option>
+              <option value="true">Has Website</option>
+              <option value="false">No Website</option>
+            </select>
+          </div>
           <div className="w-40">
             <label className="block text-xs font-medium text-surface-300 mb-1.5">Min Score: {minScore}</label>
             <input
@@ -259,7 +273,20 @@ export default function LeadsPage() {
                   >
                     <td className="px-5 py-4">
                       <p className="text-sm font-medium text-white">{lead.businessName}</p>
-                      <p className="text-xs text-surface-300">{lead.phone}</p>
+                      <a 
+                        href={`https://wa.me/${lead.phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(
+                          lead.website 
+                            ? `Hey ${lead.businessName}, I checked out your website and noticed some areas that could be improved. I'm a web developer — would you be open to a quick chat?`
+                            : `Hey ${lead.businessName}, I noticed you have great reviews but no website. I'm a web developer — would you be interested in getting one set up for your business?`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-brand-400 hover:text-brand-300 hover:underline transition-colors block mt-0.5"
+                        onClick={(e) => e.stopPropagation()}
+                        title="Click to message manually on WhatsApp"
+                      >
+                        {lead.phone}
+                      </a>
                     </td>
                     <td className="px-5 py-4 text-sm text-surface-200 capitalize">{lead.category}</td>
                     <td className="px-5 py-4 text-sm text-surface-200">{lead.city}</td>
