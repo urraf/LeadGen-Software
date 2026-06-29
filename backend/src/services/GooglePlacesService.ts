@@ -4,7 +4,7 @@ import { normalizePhone, retryWithBackoff } from '../utils/helpers.js';
 import type { GooglePlaceResult, BusinessData } from '../types/index.js';
 
 const SERPAPI_BASE = 'https://serpapi.com/search.json';
-const MAX_PAGES = 10;
+const MAX_PAGES = 25; // Increased to generate more leads
 const RESULTS_PER_PAGE = 20;
 
 interface SerpApiLocalResult {
