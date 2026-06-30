@@ -1,5 +1,5 @@
 import pkg from 'whatsapp-web.js';
-const { Client, RemoteAuth } = pkg;
+const { Client, LocalAuth } = pkg;
 // @ts-ignore
 import pkgMongo from 'wwebjs-mongo';
 const { MongoStore } = pkgMongo;
@@ -49,24 +49,19 @@ class WhatsAppService {
       const store = new MongoStore({ mongoose: mongoose });
 
       instance.client = new Client({
-        authStrategy: new RemoteAuth({
+        authStrategy: new LocalAuth({
           clientId: userId,
-          store: store,
-          backupSyncIntervalMs: 300000
+          dataPath: env.WHATSAPP_SESSION_PATH || './.wwebjs_auth'
         }),
+        webVersionCache: {
+          type: 'none'
+        },
         puppeteer: {
           executablePath: puppeteer.executablePath(),
           args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-accelerated-2d-canvas',
-            '--no-first-run',
-            '--no-zygote',
-            '--disable-gpu',
-            '--single-process',
-            '--disable-extensions',
-            '--js-flags="--max-old-space-size=256"',
+            '--disable-dev-shm-usage'
           ],
         },
       });
@@ -162,8 +157,22 @@ class WhatsAppService {
       const messageId = (msg.id as { _serialized?: string })?._serialized || String(msg.id);
       logger.info(`WhatsApp [${userId}]: message sent to ${phone}, id=${messageId}`);
       return messageId;
-    } catch (error) {
+    } catch (error: any) {
       logger.error(`WhatsApp [${userId}]: failed to send message to ${phone}:`, error);
+      
+      // Auto-recover from dead client / detached frame errors
+      if (error && error.message && (
+          error.message.includes('detached Frame') || 
+          error.message.includes('Execution context was destroyed') || 
+          error.message.includes('Protocol error') ||
+          error.message.includes('Session closed')
+      )) {
+        logger.warn(`WhatsApp [${userId}]: detecting dead client, forcing restart...`);
+        this.destroy(userId).then(() => {
+          this.initialize(userId).catch(e => logger.error(`Auto-restart failed for ${userId}:`, e));
+        });
+      }
+      
       throw error;
     }
   }

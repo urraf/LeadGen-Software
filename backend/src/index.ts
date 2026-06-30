@@ -86,19 +86,6 @@ async function start(): Promise<void> {
     app.listen(env.PORT, () => {
       logger.info(`🚀 Server running on port ${env.PORT} (${env.NODE_ENV})`);
       logger.info(`📊 Health check: http://localhost:${env.PORT}/api/health`);
-      
-      // Render free-tier keep-alive
-      const url = process.env.RENDER_EXTERNAL_URL || `http://localhost:${env.PORT}`;
-      const interval = 600000; // 10 minutes
-      function reloadWebsite() {
-          fetch(url).then((response: any) => {
-              logger.info(`Keep-alive: website reloaded (${url})`);
-          })
-          .catch((error: any) => {
-              logger.error(`Keep-alive Error: ${error.message}`);
-          });
-      }
-      setInterval(reloadWebsite, interval);
     });
   } catch (error) {
     logger.error('Failed to start server:', error);

@@ -43,7 +43,7 @@ interface LeadDetailDrawerProps {
     }>;
   };
   onClose: () => void;
-  onContact: (channel: string) => void;
+  onContact: (channel: string, instant?: boolean) => void;
   isContacting?: boolean;
 }
 
@@ -152,17 +152,24 @@ export default function LeadDetailDrawer({ lead, onClose, onContact, isContactin
             )}
           </div>
 
-          {/* Channel Contact Buttons */}
           <div className="space-y-2">
             <p className="text-xs font-medium text-surface-300 mb-2">Contact via</p>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
               <button
                 onClick={() => onContact('whatsapp')}
                 disabled={isContacting || isChannelDisabled('whatsapp')}
                 className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:bg-emerald-500/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
               >
                 <span className="text-lg">📱</span>
-                <span className="text-xs font-medium">WhatsApp</span>
+                <span className="text-xs font-medium text-center">WhatsApp<br/>(Queue)</span>
+              </button>
+              <button
+                onClick={() => onContact('whatsapp', true)}
+                disabled={isContacting || isChannelDisabled('whatsapp')}
+                className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 hover:bg-amber-500/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+              >
+                <span className="text-lg">⚡</span>
+                <span className="text-xs font-medium text-center">WhatsApp<br/>(Instant)</span>
               </button>
               <button
                 onClick={() => onContact('email')}

@@ -68,8 +68,8 @@ export default function LeadsPage() {
   });
 
   const contactMutation = useMutation({
-    mutationFn: async ({ leadId, channel }: { leadId: string; channel: string }) => {
-      const res = await client.post(`/leads/${leadId}/contact`, { channel });
+    mutationFn: async ({ leadId, channel, instant }: { leadId: string; channel: string; instant?: boolean }) => {
+      const res = await client.post(`/leads/${leadId}/contact`, { channel, instant });
       return res.data;
     },
     onSuccess: (data) => {
@@ -161,7 +161,8 @@ export default function LeadsPage() {
   };
 
   const channelOptions = [
-    { key: 'whatsapp', label: 'WhatsApp', icon: '📱', color: 'text-emerald-400' },
+    { key: 'whatsapp', label: 'WhatsApp (Queue)', icon: '📱', color: 'text-emerald-400' },
+    { key: 'whatsapp_instant', label: 'WhatsApp (Instant)', icon: '⚡', color: 'text-amber-400' },
     { key: 'email', label: 'Email', icon: '📧', color: 'text-blue-400' },
     { key: 'instagram', label: 'Instagram', icon: '📸', color: 'text-pink-400' },
   ];
@@ -328,12 +329,14 @@ export default function LeadsPage() {
                               <button
                                 key={ch.key}
                                 onClick={() => {
-                                  contactMutation.mutate({ leadId: lead._id, channel: ch.key });
+                                  const isInstant = ch.key === 'whatsapp_instant';
+                                  const actualChannel = ch.key.startsWith('whatsapp') ? 'whatsapp' : ch.key;
+                                  contactMutation.mutate({ leadId: lead._id, channel: actualChannel, instant: isInstant });
                                   if (ch.key === 'instagram') {
                                     window.open(`https://www.instagram.com/explore/search/keyword/?q=${encodeURIComponent(lead.businessName)}`, '_blank');
                                   }
                                 }}
-                                disabled={contactMutation.isPending || isChannelDisabled(lead, ch.key)}
+                                disabled={contactMutation.isPending || isChannelDisabled(lead, ch.key.startsWith('whatsapp') ? 'whatsapp' : ch.key)}
                                 className="w-full text-left px-4 py-2.5 text-sm hover:bg-surface-700/50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
                               >
                                 <span>{ch.icon}</span>
@@ -388,8 +391,8 @@ export default function LeadsPage() {
         <LeadDetailDrawer
           lead={leads.find((l) => l._id === selectedLeadId)!}
           onClose={() => setSelectedLeadId(null)}
-          onContact={(channel) => {
-            contactMutation.mutate({ leadId: selectedLeadId, channel });
+          onContact={(channel, instant) => {
+            contactMutation.mutate({ leadId: selectedLeadId, channel, instant });
             if (channel === 'instagram') {
               const lead = leads.find((l) => l._id === selectedLeadId);
               if (lead) {

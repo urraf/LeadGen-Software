@@ -140,7 +140,7 @@ export const contactLead = catchAsync(async (req: AuthRequest, res: Response) =>
   // ── Enqueue with channel-specific behavior ─────────────────
   const jobOptions: Record<string, any> = {};
 
-  if (channel === 'whatsapp') {
+  if (channel === 'whatsapp' && !req.body.instant) {
     // Anti-ban: random 5-15 minute delay between WhatsApp messages
     jobOptions.delay = getRandomDelayMs();
   }
@@ -161,13 +161,20 @@ export const contactLead = catchAsync(async (req: AuthRequest, res: Response) =>
     ? Math.round(jobOptions.delay / 60000)
     : 0;
 
+  let successMessage = 'Message sent';
+  if (channel === 'whatsapp') {
+    successMessage = req.body.instant
+      ? 'WhatsApp message queued for instant delivery ⚡'
+      : `WhatsApp message queued — will send in ~${delayMinutes} minutes (anti-ban delay)`;
+  } else if (channel === 'email') {
+    successMessage = 'Email sent';
+  } else if (channel === 'instagram') {
+    successMessage = 'Instagram message generated — copy it from the message history and paste into Instagram DMs';
+  }
+
   res.json({
     success: true,
     data: { message, content, channel, subject },
-    message: channel === 'whatsapp'
-      ? `WhatsApp message queued — will send in ~${delayMinutes} minutes (anti-ban delay)`
-      : channel === 'email'
-        ? 'Email sent'
-        : 'Instagram message generated — copy it from the message history and paste into Instagram DMs',
+    message: successMessage,
   });
 });

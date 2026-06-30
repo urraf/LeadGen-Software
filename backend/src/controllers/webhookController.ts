@@ -6,9 +6,9 @@ import { whatsappService } from '../services/WhatsAppService.js';
 export const getWhatsAppStatus = catchAsync(async (req: AuthRequest, res: Response) => {
   const status = whatsappService.getStatus(req.userId!);
   // Auto-initialize disabled temporarily to save RAM on Render
-  // if (!status.ready && !status.qr) {
-  //   whatsappService.initialize(req.userId!).catch(() => {});
-  // }
+  if (!status.ready && !status.qr) {
+    whatsappService.initialize(req.userId!).catch(() => {});
+  }
   res.json({ success: true, data: status });
 });
 
@@ -20,7 +20,7 @@ export const resetWhatsApp = catchAsync(async (req: AuthRequest, res: Response) 
   }
   
   // Re-initialize temporarily disabled
-  // whatsappService.initialize(req.userId!).catch(() => {});
+  whatsappService.initialize(req.userId!).catch(() => {});
   
   res.json({ success: true, message: 'WhatsApp reset initiated (Initialization disabled)' });
 });
