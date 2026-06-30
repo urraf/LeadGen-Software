@@ -49,10 +49,16 @@ async function handleSearchJob(data: SearchJobData): Promise<void> {
 
       const duration = Date.now() - startTime;
 
+      // Count leads with/without websites from the newly created leads
+      const withWebsite = createdLeads?.filter(l => l.website && l.website.length > 0).length || 0;
+      const withoutWebsite = (newLeads || 0) - withWebsite;
+
       // Update campaign stats
       await campaignRepository.updateStats(userId, campaignId, {
         totalSearched: businesses.length,
         totalLeads: newLeads,
+        totalWithWebsite: withWebsite,
+        totalWithoutWebsite: withoutWebsite,
       });
       await campaignRepository.updateLastRunAt(userId, campaignId);
 

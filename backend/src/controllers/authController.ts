@@ -9,6 +9,19 @@ import type { AuthRequest } from '../middlewares/authMiddleware.js';
 const ACCESS_TOKEN_EXPIRY = '15m';
 const REFRESH_TOKEN_EXPIRY = '7d';
 
+// In Electron (localhost), cookies must be sameSite=strict, secure=false
+// In cloud deployment (cross-origin), cookies need sameSite=none, secure=true
+const isCrossOrigin = process.env.CORS_MODE === 'cross-origin';
+
+function getCookieOptions() {
+  return {
+    httpOnly: true,
+    secure: isCrossOrigin,
+    sameSite: (isCrossOrigin ? 'none' : 'strict') as 'none' | 'strict',
+    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+  };
+}
+
 function generateAccessToken(userId: string): string {
   return jwt.sign({ userId }, env.JWT_SECRET, { expiresIn: ACCESS_TOKEN_EXPIRY });
 }
@@ -38,12 +51,7 @@ export const login = catchAsync(async (req: Request, res: Response) => {
   await user.save();
 
   // Set refresh token in HttpOnly cookie
-  res.cookie('refreshToken', refreshToken, {
-    httpOnly: true,
-    secure: env.NODE_ENV === 'production',
-    sameSite: env.NODE_ENV === 'production' ? 'none' : 'strict',
-    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-  });
+  res.cookie('refreshToken', refreshToken, getCookieOptions());
 
   res.json({
     success: true,
@@ -87,12 +95,7 @@ export const refresh = catchAsync(async (req: Request, res: Response) => {
   user.refreshToken = newRefreshToken;
   await user.save();
 
-  res.cookie('refreshToken', newRefreshToken, {
-    httpOnly: true,
-    secure: env.NODE_ENV === 'production',
-    sameSite: env.NODE_ENV === 'production' ? 'none' : 'strict',
-    maxAge: 7 * 24 * 60 * 60 * 1000,
-  });
+  res.cookie('refreshToken', newRefreshToken, getCookieOptions());
 
   res.json({
     success: true,
@@ -110,8 +113,8 @@ export const logout = catchAsync(async (req: AuthRequest, res: Response) => {
 
   res.clearCookie('refreshToken', {
     httpOnly: true,
-    secure: env.NODE_ENV === 'production',
-    sameSite: env.NODE_ENV === 'production' ? 'none' : 'strict',
+    secure: isCrossOrigin,
+    sameSite: (isCrossOrigin ? 'none' : 'strict') as 'none' | 'strict',
   });
   res.json({ success: true, message: 'Logged out successfully' });
 });
@@ -158,3 +161,45 @@ export const updateProfile = catchAsync(async (req: AuthRequest, res: Response) 
     message: 'Profile updated successfully',
   });
 });
+
+// ─── Register (for multi-user Electron setup) ────────────────────
+export const register = catchAsync(async (req: Request, res: Response) => {
+  const { email, password, name } = req.body;
+
+  // Check if user already exists
+  const existingUser = await User.findOne({ email: email.toLowerCase() });
+  if (existingUser) {
+    throw new AppError('An account with this email already exists', 409);
+  }
+
+  // Create new user
+  const hashedPassword = await bcrypt.hash(password, 12);
+  const user = await User.create({
+    email: email.toLowerCase(),
+    password: hashedPassword,
+    name: name || undefined,
+  });
+
+  const accessToken = generateAccessToken(user._id.toString());
+  const refreshToken = generateRefreshToken(user._id.toString());
+
+  user.refreshToken = refreshToken;
+  await user.save();
+
+  res.cookie('refreshToken', refreshToken, getCookieOptions());
+
+  res.status(201).json({
+    success: true,
+    data: {
+      accessToken,
+      refreshToken,
+      user: {
+        id: user._id,
+        email: user.email,
+        name: user.name,
+      },
+    },
+    message: 'Account created successfully',
+  });
+});
+

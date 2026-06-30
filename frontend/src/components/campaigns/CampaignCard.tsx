@@ -7,6 +7,7 @@ import {
   TrashIcon,
   MapPinIcon,
   TagIcon,
+  GlobeAltIcon,
 } from '@heroicons/react/24/outline';
 
 interface CampaignCardProps {
@@ -39,18 +40,24 @@ export default function CampaignCard({ campaign, onAction, onDelete }: CampaignC
       </div>
 
       {/* Stats Bar */}
-      <div className="grid grid-cols-3 gap-3 mb-4">
+      <div className="grid grid-cols-4 gap-2 mb-4">
         <div className="text-center p-2 rounded-lg bg-surface-800/50">
           <p className="text-lg font-bold text-white">{stats.totalLeads}</p>
-          <p className="text-xs text-surface-300">Leads</p>
+          <p className="text-[10px] text-surface-300 uppercase tracking-wider font-semibold">Leads</p>
         </div>
         <div className="text-center p-2 rounded-lg bg-surface-800/50">
           <p className="text-lg font-bold text-white">{stats.totalContacted}</p>
-          <p className="text-xs text-surface-300">Contacted</p>
+          <p className="text-[10px] text-surface-300 uppercase tracking-wider font-semibold">Contacted</p>
+        </div>
+        <div className="text-center p-2 rounded-lg bg-surface-800/50">
+          <p className="text-lg font-bold text-brand-400">{stats.totalWithWebsite || 0}</p>
+          <p className="text-[10px] text-surface-300 uppercase tracking-wider font-semibold flex items-center justify-center gap-1">
+            <GlobeAltIcon className="w-3 h-3" /> Website
+          </p>
         </div>
         <div className="text-center p-2 rounded-lg bg-surface-800/50">
           <p className="text-lg font-bold text-white">{stats.totalSearched}</p>
-          <p className="text-xs text-surface-300">Searched</p>
+          <p className="text-[10px] text-surface-300 uppercase tracking-wider font-semibold">Searched</p>
         </div>
       </div>
 

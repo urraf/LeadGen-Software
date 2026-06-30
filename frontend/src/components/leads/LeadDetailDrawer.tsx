@@ -28,6 +28,8 @@ interface LeadDetailDrawerProps {
     status: string;
     googleMapsUrl: string;
     website?: string;
+    websiteQualityScore?: number;
+    websiteQualityIssues?: string;
     followUpCount: number;
     notes?: string;
     createdAt: string;
@@ -45,6 +47,8 @@ interface LeadDetailDrawerProps {
   onClose: () => void;
   onContact: (channel: string, instant?: boolean) => void;
   isContacting?: boolean;
+  onUpdateStatus?: (status: string) => void;
+  isUpdatingStatus?: boolean;
 }
 
 const channelIcon = (channel?: string) => {
@@ -63,7 +67,7 @@ const channelLabel = (channel?: string) => {
   }
 };
 
-export default function LeadDetailDrawer({ lead, onClose, onContact, isContacting }: LeadDetailDrawerProps) {
+export default function LeadDetailDrawer({ lead, onClose, onContact, isContacting, onUpdateStatus, isUpdatingStatus }: LeadDetailDrawerProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
   if (!lead) return null;
@@ -112,12 +116,23 @@ export default function LeadDetailDrawer({ lead, onClose, onContact, isContactin
             {lead.aiQualified && (
               <span className="badge bg-brand-500/10 text-brand-400 border border-brand-500/20">Qualified</span>
             )}
+            {lead.websiteQualityScore !== undefined && (
+              <div className={`badge border ${lead.websiteQualityScore >= 70 ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : lead.websiteQualityScore >= 40 ? 'bg-amber-500/10 text-amber-400 border-amber-500/20' : 'bg-red-500/10 text-red-400 border-red-500/20'}`}>
+                Web Score: {lead.websiteQualityScore}
+              </div>
+            )}
           </div>
 
           {/* AI Reason */}
           <div className="p-3 rounded-xl bg-surface-800/50 border border-surface-700/30">
             <p className="text-xs font-medium text-surface-300 mb-1">AI Assessment</p>
             <p className="text-sm text-surface-200">{lead.aiReason}</p>
+            {lead.websiteQualityIssues && (
+              <div className="mt-3 pt-3 border-t border-surface-700/50">
+                <p className="text-xs font-medium text-surface-300 mb-1">Website Issues</p>
+                <p className="text-sm text-red-400">{lead.websiteQualityIssues}</p>
+              </div>
+            )}
           </div>
 
           {/* Details */}
@@ -189,6 +204,35 @@ export default function LeadDetailDrawer({ lead, onClose, onContact, isContactin
               </button>
             </div>
           </div>
+
+          {onUpdateStatus && (
+            <div className="space-y-2 mt-4 pt-4 border-t border-surface-700/30">
+              <p className="text-xs font-medium text-surface-300 mb-2">Mark Status</p>
+              <div className="grid grid-cols-3 gap-2">
+                <button
+                  onClick={() => onUpdateStatus('CONTACTED')}
+                  disabled={isUpdatingStatus}
+                  className="py-2 rounded-lg bg-info-500/10 border border-info-500/20 text-info-400 hover:bg-info-500/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all text-xs font-medium"
+                >
+                  Contacted
+                </button>
+                <button
+                  onClick={() => onUpdateStatus('INTERESTED')}
+                  disabled={isUpdatingStatus}
+                  className="py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:bg-emerald-500/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all text-xs font-medium"
+                >
+                  Interested
+                </button>
+                <button
+                  onClick={() => onUpdateStatus('NOT_INTERESTED')}
+                  disabled={isUpdatingStatus}
+                  className="py-2 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 hover:bg-red-500/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all text-xs font-medium"
+                >
+                  Not Interested
+                </button>
+              </div>
+            </div>
+          )}
 
           {/* Message History */}
           {lead.messageHistory && lead.messageHistory.length > 0 && (

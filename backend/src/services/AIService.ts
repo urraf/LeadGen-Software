@@ -16,6 +16,7 @@ export class AIService {
   }
 
   async qualifyLead(business: BusinessData): Promise<AIQualificationResult> {
+    const hasWebsite = !!business.website;
     const prompt = `You are a web development sales qualification expert.
 
 Business Details:
@@ -23,14 +24,36 @@ Name: ${business.name}
 Category: ${business.category}
 Rating: ${business.rating ?? 'N/A'}/5 (${business.reviewCount ?? 0} reviews)
 Address: ${business.address}
-Has Website: ${business.website ? 'Yes' : 'No'}
+Has Website: ${hasWebsite ? 'Yes — ' + business.website : 'No'}
 
-Evaluate whether this business would benefit from a professional website.
+${hasWebsite
+  ? `IMPORTANT: This business HAS a website. Evaluate whether their website likely has quality issues that make it an upgrade opportunity. Consider these common problems:
+- Not mobile-responsive (very common for older sites)
+- Slow loading (heavy images, no optimization)
+- HTTP instead of HTTPS (security risk)
+- Outdated design (looks like 2013)
+- Broken contact forms or missing CTAs
+- No SEO optimization
+- Poor user experience
+
+Give a "websiteQualityScore" from 0-100 where:
+- 0-30 = terrible website, GREAT upgrade opportunity
+- 31-50 = poor website, good upgrade opportunity
+- 51-70 = decent website, moderate opportunity
+- 71-100 = good website, low priority
+
+Also provide "websiteQualityIssues" listing the likely problems (max 30 words).
+A business with a BAD website is STILL qualified — selling an upgrade is easier than selling from scratch.`
+  : `This business has NO website. They are a prime candidate for web development services.`}
+
+Evaluate whether this business would benefit from professional web development services.
 Return ONLY a JSON object:
 {
   "qualified": boolean,
-  "score": number (0-100),
-  "reason": string (max 20 words)
+  "score": number (0-100, overall lead quality),
+  "reason": string (max 20 words)${hasWebsite ? `,
+  "websiteQualityScore": number (0-100, website quality),
+  "websiteQualityIssues": string (max 30 words, specific issues)` : ''}
 }`;
 
     try {
@@ -46,7 +69,7 @@ Return ONLY a JSON object:
           model: this.model,
           response_format: { type: 'json_object' },
           temperature: 0.3,
-          max_tokens: 200,
+          max_tokens: 300,
         });
 
         const content = completion.choices[0]?.message?.content;
@@ -56,20 +79,23 @@ Return ONLY a JSON object:
 
         const result = JSON.parse(content) as AIQualificationResult;
 
-        // Validate and clamp the score
         return {
           qualified: Boolean(result.qualified),
           score: Math.max(0, Math.min(100, Number(result.score) || 0)),
           reason: String(result.reason || 'No reason provided').slice(0, 200),
+          ...(hasWebsite && result.websiteQualityScore !== undefined ? {
+            websiteQualityScore: Math.max(0, Math.min(100, Number(result.websiteQualityScore) || 50)),
+            websiteQualityIssues: String(result.websiteQualityIssues || '').slice(0, 300),
+          } : {}),
         };
       }, 3, 1000);
     } catch (error) {
       logger.error(`AI qualification failed for ${business.name}:`, error);
-      // Return a default result on failure
       return {
-        qualified: !business.website,
-        score: business.website ? 20 : 50,
+        qualified: !business.website || true, // Always qualified if has bad website
+        score: business.website ? 40 : 50,
         reason: 'AI qualification unavailable — using default scoring',
+        ...(hasWebsite ? { websiteQualityScore: 40, websiteQualityIssues: 'Could not analyze — assumed moderate quality' } : {}),
       };
     }
   }
@@ -80,21 +106,37 @@ Return ONLY a JSON object:
     city: string;
     rating?: number;
     reviewCount?: number;
+    website?: string;
+    websiteQualityScore?: number;
+    websiteQualityIssues?: string;
   }): Promise<string> {
+    const hasWebsite = !!lead.website;
+    const hasBadWebsite = hasWebsite && (lead.websiteQualityScore !== undefined ? lead.websiteQualityScore <= 50 : true);
+
     const prompt = `Generate a WhatsApp message for a web developer reaching out to a potential client.
 
 Business: ${lead.businessName}
 Category: ${lead.category}
 City: ${lead.city}
 Rating: ${lead.rating ?? 'N/A'} stars, ${lead.reviewCount ?? 0} reviews
-Has Website: No
+${hasWebsite
+  ? `Has Website: Yes (${lead.website})
+Website Quality Score: ${lead.websiteQualityScore ?? 'Unknown'}/100
+Website Issues: ${lead.websiteQualityIssues || 'Not analyzed'}
+PITCH ANGLE: Their website needs an upgrade/redesign. Focus on how a modern website would help them get more customers.`
+  : `Has Website: No
+PITCH ANGLE: They don't have a website at all. Focus on how having a website would help their business.`}
 
 Rules:
 - Keep it extremely short, simple, and casual (maximum 30-40 words)
 - Sound like a real person casually texting from their phone
-- Briefly mention their business name and that you noticed they don't have a website
+${hasBadWebsite
+  ? `- Mention you checked out their website and noticed it could use some improvements (be specific if possible — e.g. mobile-friendliness, speed, modern design)
 - Casually mention that you are a web developer
-- Ask directly but politely if they are interested in getting a website for their business (e.g. "Are you looking to get a website set up for your business?" or "Would you be interested in having one built?")
+- Ask if they would be interested in a website upgrade or redesign`
+  : `- Briefly mention their business name and that you noticed they don't have a website
+- Casually mention that you are a web developer
+- Ask directly but politely if they are interested in getting a website for their business`}
 - Do NOT sound pushy or corporate
 - Do NOT use formal language (use "Hey" or "Hi" instead of "Dear")
 - No emojis and no exclamation marks

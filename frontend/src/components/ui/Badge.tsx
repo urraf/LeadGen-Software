@@ -35,6 +35,7 @@ export function getStatusVariant(status: string): BadgeProps['variant'] {
     READ: 'success',
     REPLIED: 'success',
     INTERESTED: 'success',
+    NOT_INTERESTED: 'danger',
     MEETING_BOOKED: 'primary',
     PROPOSAL_SENT: 'primary',
     CONVERTED: 'success',

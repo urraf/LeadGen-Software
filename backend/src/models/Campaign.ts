@@ -59,6 +59,8 @@ const campaignSchema = new Schema<CampaignDocument>(
       totalSearched: { type: Number, default: 0 },
       totalLeads: { type: Number, default: 0 },
       totalContacted: { type: Number, default: 0 },
+      totalWithWebsite: { type: Number, default: 0 },
+      totalWithoutWebsite: { type: Number, default: 0 },
     },
     lastRunAt: {
       type: Date,

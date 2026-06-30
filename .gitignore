@@ -6,3 +6,7 @@ logs/
 .wwebjs_cache/
 *.log
 .cache/
+
+# Electron build output
+release/
+Electron.app

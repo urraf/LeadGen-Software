@@ -83,6 +83,14 @@ const leadSchema = new Schema<LeadDocument>(
       type: String,
       default: '',
     },
+    websiteQualityScore: {
+      type: Number,
+      min: 0,
+      max: 100,
+    },
+    websiteQualityIssues: {
+      type: String,
+    },
     status: {
       type: String,
       enum: LEAD_STATUSES as unknown as LeadStatus[],

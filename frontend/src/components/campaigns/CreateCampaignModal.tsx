@@ -17,6 +17,7 @@ export default function CreateCampaignModal({ onClose }: CreateCampaignModalProp
 
   const [minRating, setMinRating] = useState(3.5);
   const [minReviews, setMinReviews] = useState(10);
+  const [includeWebsites, setIncludeWebsites] = useState(true);
   const [scheduleEnabled, setScheduleEnabled] = useState(false);
 
   const createCampaign = useCreateCampaign();
@@ -42,7 +43,7 @@ export default function CreateCampaignModal({ onClose }: CreateCampaignModalProp
       filters: {
         minRating,
         minReviews,
-        excludeWithWebsite: true,
+        excludeWithWebsite: !includeWebsites,
       },
       schedule: {
         enabled: scheduleEnabled,
@@ -166,6 +167,26 @@ export default function CreateCampaignModal({ onClose }: CreateCampaignModalProp
                 min={0}
               />
             </div>
+          </div>
+
+          <div className="flex items-center justify-between p-3 rounded-xl bg-surface-800/50">
+            <div>
+              <p className="text-sm font-medium text-surface-200">Include Businesses with Websites</p>
+              <p className="text-xs text-surface-300">If on, AI will score website quality</p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setIncludeWebsites(!includeWebsites)}
+              className={`relative w-11 h-6 rounded-full transition-colors ${
+                includeWebsites ? 'bg-brand-500' : 'bg-surface-700'
+              }`}
+            >
+              <span
+                className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white transition-transform ${
+                  includeWebsites ? 'translate-x-5' : 'translate-x-0'
+                }`}
+              />
+            </button>
           </div>
 
           {/* Schedule Toggle */}

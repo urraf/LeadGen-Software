@@ -1,4 +1,6 @@
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import helmet from 'helmet';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
@@ -26,7 +28,10 @@ import webhookRoutes from './routes/webhooks.js';
 const app = express();
 
 // ─── Middleware ───────────────────────────────────────────────────
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: false, // Allow React frontend assets
+  crossOriginEmbedderPolicy: false,
+}));
 app.use(cors({
   origin: env.FRONTEND_URL,
   credentials: true,
@@ -53,9 +58,21 @@ app.use('/api/messages', messageRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/webhooks', webhookRoutes);
 
-// ─── 404 Handler ─────────────────────────────────────────────────
-app.use((_req, res) => {
-  res.status(404).json({ success: false, error: 'Route not found' });
+// ─── API 404 Handler ─────────────────────────────────────────────
+app.all('/api/*', (_req, res) => {
+  res.status(404).json({ success: false, error: 'API route not found' });
+});
+
+// ─── Serve Frontend (for Electron / production) ─────────────────
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const frontendDistPath = path.join(__dirname, '..', '..', 'frontend', 'dist');
+
+app.use(express.static(frontendDistPath));
+
+// SPA catch-all — return index.html for any non-API route
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(frontendDistPath, 'index.html'));
 });
 
 // ─── Error Handler ───────────────────────────────────────────────

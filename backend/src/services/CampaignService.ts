@@ -10,7 +10,7 @@ export class CampaignService {
     const campaign = await campaignRepository.create(userId, {
       ...data,
       status: 'PAUSED',
-      stats: { totalSearched: 0, totalLeads: 0, totalContacted: 0 },
+      stats: { totalSearched: 0, totalLeads: 0, totalContacted: 0, totalWithWebsite: 0, totalWithoutWebsite: 0 },
     });
     logger.info(`Campaign created: "${campaign.name}" (${campaign._id}) by User ${userId}`);
     return campaign;

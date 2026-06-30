@@ -115,6 +115,9 @@ export const contactLead = catchAsync(async (req: AuthRequest, res: Response) =>
         city: lead.city,
         rating: lead.rating,
         reviewCount: lead.reviewCount,
+        website: lead.website,
+        websiteQualityScore: lead.websiteQualityScore,
+        websiteQualityIssues: lead.websiteQualityIssues,
       });
     }
   } catch (error) {

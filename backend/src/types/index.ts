@@ -11,6 +11,7 @@ export const LEAD_STATUSES = [
   'READ',
   'REPLIED',
   'INTERESTED',
+  'NOT_INTERESTED',
   'MEETING_BOOKED',
   'PROPOSAL_SENT',
   'CONVERTED',
@@ -49,6 +50,8 @@ export interface ICampaignStats {
   totalSearched: number;
   totalLeads: number;
   totalContacted: number;
+  totalWithWebsite: number;
+  totalWithoutWebsite: number;
 }
 
 export interface ICampaign {
@@ -89,6 +92,8 @@ export interface ILead {
   aiScore: number;
   aiQualified: boolean;
   aiReason: string;
+  websiteQualityScore?: number;
+  websiteQualityIssues?: string;
   status: LeadStatus;
   notes?: string;
   messageHistory: Types.ObjectId[];
@@ -168,6 +173,8 @@ export interface AIQualificationResult {
   qualified: boolean;
   score: number;
   reason: string;
+  websiteQualityScore?: number;
+  websiteQualityIssues?: string;
 }
 
 // ─── API Response Types ──────────────────────────────────────────

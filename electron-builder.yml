@@ -1,0 +1,71 @@
+appId: com.leadgenpro.app
+productName: LeadGen Pro
+copyright: Copyright © 2025 Farhan
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - electron/**/*
+  - frontend/dist/**/*
+  - package.json
+  - "!**/node_modules/*/{CHANGELOG.md,README.md,LICENSE,license,readme.md}"
+  - "!**/{test,__tests__,tests,powered-test,example,examples,docs,.github}/**"
+
+# Extra resources that get unpacked directly to the filesystem
+extraResources:
+  - from: backend/.cache
+    to: .cache
+    filter:
+      - "**/*"
+  - from: backend
+    to: backend
+    filter:
+      - "dist/**/*"
+      - "package.json"
+      - "node_modules/**/*"
+      - ".puppeteerrc.cjs"
+  - from: frontend/dist
+    to: frontend/dist
+    filter:
+      - "**/*"
+
+win:
+  icon: build/icons/win/icon.ico
+  target:
+    - target: nsis
+      arch:
+        - x64
+  artifactName: "${productName}-Setup-${version}.${ext}"
+
+nsis:
+  oneClick: true
+  perMachine: false
+  allowToChangeInstallationDirectory: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: LeadGen Pro
+  installerIcon: build/icons/win/icon.ico
+  uninstallerIcon: build/icons/win/icon.ico
+
+mac:
+  icon: build/icons/mac/icon.icns
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+  category: public.app-category.business
+  artifactName: "${productName}-${version}-${arch}.${ext}"
+
+dmg:
+  title: "${productName} ${version}"
+  artifactName: "${productName}-${version}-${arch}.${ext}"
+
+# Auto-update via GitHub Releases
+publish:
+  provider: github
+  owner: urraf
+  repo: LeadGen-Software
+  releaseType: release

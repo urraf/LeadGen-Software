@@ -10,9 +10,10 @@ export interface Campaign {
   country: string;
   state?: string;
   status: 'ACTIVE' | 'PAUSED' | 'STOPPED' | 'COMPLETED';
+  isSearching?: boolean;
   schedule?: { enabled: boolean; cronExpression: string };
   filters: { minRating: number; minReviews: number; excludeWithWebsite: boolean };
-  stats: { totalSearched: number; totalLeads: number; totalContacted: number };
+  stats: { totalSearched: number; totalLeads: number; totalContacted: number; totalWithWebsite?: number; totalWithoutWebsite?: number };
   lastRunAt?: string;
   createdAt: string;
   updatedAt: string;

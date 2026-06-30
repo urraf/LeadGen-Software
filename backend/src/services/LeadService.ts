@@ -14,7 +14,12 @@ export class LeadService {
     let score = 0;
 
     // Core signals
-    if (!business.website) score += 50;  // Primary criterion — no website
+    if (!business.website) {
+      score += 50;  // Primary criterion — no website
+    } else {
+      // Has website — still valuable as upgrade opportunity
+      score += 25;  // Base score for businesses with websites (upgrade potential)
+    }
     if (business.phone) score += 10;     // Contactable
 
     // Quality signals — rating
@@ -95,6 +100,8 @@ export class LeadService {
           aiScore: combinedScore,
           aiQualified: aiResult.qualified,
           aiReason: aiResult.reason,
+          websiteQualityScore: aiResult.websiteQualityScore,
+          websiteQualityIssues: aiResult.websiteQualityIssues,
           status,
           followUpCount: 0,
           messageHistory: [],

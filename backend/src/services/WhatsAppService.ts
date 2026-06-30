@@ -17,6 +17,7 @@ interface WhatsAppInstance {
   isReady: boolean;
   isAuthenticated: boolean;
   latestQRBase64: string | null;
+  qrExpiryTimer: NodeJS.Timeout | null;
   initializationPromise: Promise<void> | null;
 }
 
@@ -30,6 +31,7 @@ class WhatsAppService {
         isReady: false,
         isAuthenticated: false,
         latestQRBase64: null,
+        qrExpiryTimer: null,
         initializationPromise: null,
       });
     }
@@ -48,6 +50,9 @@ class WhatsAppService {
     try {
       const store = new MongoStore({ mongoose: mongoose });
 
+      const puppeteerEnv = { ...process.env };
+      delete puppeteerEnv.ELECTRON_RUN_AS_NODE;
+
       instance.client = new Client({
         authStrategy: new LocalAuth({
           clientId: userId,
@@ -57,7 +62,8 @@ class WhatsAppService {
           type: 'none'
         },
         puppeteer: {
-          executablePath: puppeteer.executablePath(),
+          executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || puppeteer.executablePath(),
+          env: puppeteerEnv,
           args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
@@ -70,6 +76,13 @@ class WhatsAppService {
         try {
           instance.latestQRBase64 = await QRCode.toDataURL(qr, { width: 300 });
           logger.info(`WhatsApp [${userId}]: new QR code generated — scan to authenticate`);
+          
+          // Expire the QR after 50s (WhatsApp typically refreshes them every 60s)
+          if (instance.qrExpiryTimer) clearTimeout(instance.qrExpiryTimer);
+          instance.qrExpiryTimer = setTimeout(() => {
+            instance.latestQRBase64 = null;
+            logger.info(`WhatsApp [${userId}]: QR code expired`);
+          }, 50000);
         } catch (error) {
           logger.error(`WhatsApp [${userId}]: failed to generate QR base64:`, error);
         }
@@ -79,12 +92,14 @@ class WhatsAppService {
         instance.isReady = true;
         instance.isAuthenticated = true;
         instance.latestQRBase64 = null;
+        if (instance.qrExpiryTimer) clearTimeout(instance.qrExpiryTimer);
         logger.info(`WhatsApp [${userId}]: client is ready`);
       });
 
       instance.client.on('authenticated', () => {
         instance.isAuthenticated = true;
         instance.latestQRBase64 = null;
+        if (instance.qrExpiryTimer) clearTimeout(instance.qrExpiryTimer);
         logger.info(`WhatsApp [${userId}]: authenticated successfully, waiting for sync...`);
       });
 
@@ -202,6 +217,7 @@ class WhatsAppService {
         logger.error(`WhatsApp [${userId}]: error destroying client:`, error);
       }
     }
+    if (instance.qrExpiryTimer) clearTimeout(instance.qrExpiryTimer);
     this.instances.delete(userId);
   }
 

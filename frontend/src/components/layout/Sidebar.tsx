@@ -36,7 +36,10 @@ export default function Sidebar() {
       const res = await client.get('/webhooks/whatsapp/status');
       return res.data.data;
     },
-    refetchInterval: 10000,
+    refetchInterval: (query) => {
+      // Fast polling (3s) when waiting for QR/connection, slow polling (10s) when connected
+      return query.state.data?.ready ? 10000 : 3000;
+    },
   });
 
   const resetMutation = useMutation({

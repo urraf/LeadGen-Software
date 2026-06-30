@@ -29,6 +29,8 @@ interface Lead {
   googleMapsUrl: string;
   address: string;
   website?: string;
+  websiteQualityScore?: number;
+  websiteQualityIssues?: string;
   followUpCount: number;
   notes?: string;
   messageHistory: Array<{
@@ -51,6 +53,7 @@ export default function LeadsPage() {
   const [minScore, setMinScore] = useState(0);
   const [selectedLeadId, setSelectedLeadId] = useState<string | null>(null);
   const [openDropdownId, setOpenDropdownId] = useState<string | null>(null);
+  const [openStatusDropdownId, setOpenStatusDropdownId] = useState<string | null>(null);
   const queryClient = useQueryClient();
 
   const { data, isLoading } = useQuery({
@@ -81,6 +84,22 @@ export default function LeadsPage() {
       const msg = err?.response?.data?.error || err?.response?.data?.message || 'Failed to contact lead';
       toast.error(msg);
       setOpenDropdownId(null);
+    },
+  });
+
+  const updateStatusMutation = useMutation({
+    mutationFn: async ({ leadId, status }: { leadId: string; status: string }) => {
+      const res = await client.patch(`/leads/${leadId}`, { status });
+      return res.data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['leads'] });
+      toast.success('Lead status updated');
+      setOpenStatusDropdownId(null);
+    },
+    onError: (err: any) => {
+      toast.error('Failed to update status');
+      setOpenStatusDropdownId(null);
     },
   });
 
@@ -167,6 +186,12 @@ export default function LeadsPage() {
     { key: 'instagram', label: 'Instagram', icon: '📸', color: 'text-pink-400' },
   ];
 
+  const statusOptions = [
+    { key: 'CONTACTED', label: 'Mark Contacted', color: 'text-info-400' },
+    { key: 'INTERESTED', label: 'Mark Interested', color: 'text-emerald-400' },
+    { key: 'NOT_INTERESTED', label: 'Mark Not Interested', color: 'text-red-400' },
+  ];
+
   if (isLoading) {
     return (
       <div className="flex flex-col items-center justify-center h-[60vh] space-y-4 animate-in fade-in duration-300">
@@ -219,6 +244,7 @@ export default function LeadsPage() {
               <option value="MESSAGE_SENT">Message Sent</option>
               <option value="REPLIED">Replied</option>
               <option value="INTERESTED">Interested</option>
+              <option value="NOT_INTERESTED">Not Interested</option>
               <option value="CONVERTED">Converted</option>
               <option value="COLD">Cold</option>
             </select>
@@ -297,9 +323,16 @@ export default function LeadsPage() {
                       </span>
                     </td>
                     <td className="px-5 py-4 text-center">
-                      <span className={`text-sm font-bold ${getScoreColor(lead.aiScore)}`}>
-                        {lead.aiScore}
-                      </span>
+                      <div className="flex flex-col items-center gap-1">
+                        <span className={`text-sm font-bold ${getScoreColor(lead.aiScore)}`}>
+                          {lead.aiScore}
+                        </span>
+                        {lead.websiteQualityScore !== undefined && (
+                          <span className="text-[10px] bg-surface-700 text-surface-200 px-1.5 py-0.5 rounded" title="Website Quality Score">
+                            Web: {lead.websiteQualityScore}
+                          </span>
+                        )}
+                      </div>
                     </td>
                     <td className="px-5 py-4 text-center">
                       <Badge label={lead.status} variant={getStatusVariant(lead.status)} />
@@ -319,7 +352,6 @@ export default function LeadsPage() {
                           <ChevronDownIcon className="w-3 h-3" />
                         </button>
 
-                        {/* Channel Dropdown */}
                         {openDropdownId === lead._id && (
                           <div
                             className="absolute right-0 top-full mt-1 w-40 bg-surface-800 border border-surface-700/50 rounded-xl shadow-xl z-50 overflow-hidden animate-fade-in"
@@ -341,6 +373,42 @@ export default function LeadsPage() {
                               >
                                 <span>{ch.icon}</span>
                                 <span className={ch.color}>{ch.label}</span>
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Status Action Dropdown */}
+                      <div className="relative inline-block ml-3">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setOpenStatusDropdownId(openStatusDropdownId === lead._id ? null : lead._id);
+                            setOpenDropdownId(null);
+                          }}
+                          className="flex items-center justify-center w-6 h-6 rounded hover:bg-surface-700 text-surface-400 transition-colors"
+                          title="Mark Status"
+                        >
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                          </svg>
+                        </button>
+                        {openStatusDropdownId === lead._id && (
+                          <div
+                            className="absolute right-0 top-full mt-1 w-44 bg-surface-800 border border-surface-700/50 rounded-xl shadow-xl z-50 overflow-hidden animate-fade-in"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            {statusOptions.map((opt) => (
+                              <button
+                                key={opt.key}
+                                onClick={() => {
+                                  updateStatusMutation.mutate({ leadId: lead._id, status: opt.key });
+                                }}
+                                disabled={updateStatusMutation.isPending}
+                                className={`w-full text-left px-4 py-2 text-sm hover:bg-surface-700/50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors ${opt.color}`}
+                              >
+                                {opt.label}
                               </button>
                             ))}
                           </div>
@@ -391,6 +459,8 @@ export default function LeadsPage() {
         <LeadDetailDrawer
           lead={leads.find((l) => l._id === selectedLeadId)!}
           onClose={() => setSelectedLeadId(null)}
+          onUpdateStatus={(status) => updateStatusMutation.mutate({ leadId: selectedLeadId, status })}
+          isUpdatingStatus={updateStatusMutation.isPending}
           onContact={(channel, instant) => {
             contactMutation.mutate({ leadId: selectedLeadId, channel, instant });
             if (channel === 'instagram') {
