@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useState, useEffect } from 'react';
+import { useQuery, useMutation, useQueryClient, keepPreviousData } from '@tanstack/react-query';
 import client from '../api/client';
 import Badge, { getStatusVariant } from '../components/ui/Badge';
 import EmptyState from '../components/ui/EmptyState';
@@ -48,6 +48,7 @@ interface Lead {
 export default function LeadsPage() {
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
+  const [debouncedSearch, setDebouncedSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
   const [hasWebsiteFilter, setHasWebsiteFilter] = useState('all');
   const [minScore, setMinScore] = useState(0);
@@ -56,11 +57,21 @@ export default function LeadsPage() {
   const [openStatusDropdownId, setOpenStatusDropdownId] = useState<string | null>(null);
   const queryClient = useQueryClient();
 
-  const { data, isLoading } = useQuery({
-    queryKey: ['leads', page, search, statusFilter, minScore, hasWebsiteFilter],
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(search);
+      if (search !== debouncedSearch) {
+        setPage(1);
+      }
+    }, 350);
+    return () => clearTimeout(timer);
+  }, [search]);
+
+  const { data, isLoading, isFetching } = useQuery({
+    queryKey: ['leads', page, debouncedSearch, statusFilter, minScore, hasWebsiteFilter],
     queryFn: async () => {
       const params: Record<string, string | number> = { page, limit: 20 };
-      if (search) params.search = search;
+      if (debouncedSearch) params.search = debouncedSearch;
       if (statusFilter) params.status = statusFilter;
       if (minScore > 0) params.minScore = minScore;
       if (hasWebsiteFilter !== 'all') params.hasWebsite = hasWebsiteFilter;
@@ -68,6 +79,7 @@ export default function LeadsPage() {
       return res.data;
     },
     refetchInterval: 5000,
+    placeholderData: keepPreviousData,
   });
 
   const contactMutation = useMutation({
@@ -223,11 +235,14 @@ export default function LeadsPage() {
             <div className="relative">
               <MagnifyingGlassIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-surface-300" />
               <input
-                className="input-field pl-10"
-                placeholder="Search businesses..."
+                className="input-field pl-10 pr-8"
+                placeholder="Search business, phone, city, address..."
                 value={search}
-                onChange={(e) => { setSearch(e.target.value); setPage(1); }}
+                onChange={(e) => setSearch(e.target.value)}
               />
+              {isFetching && !isLoading && (
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 border-2 border-brand-500/30 border-t-brand-500 rounded-full animate-spin" />
+              )}
             </div>
           </div>
           <div className="w-40">

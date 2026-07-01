@@ -22,5 +22,5 @@ export const resetWhatsApp = catchAsync(async (req: AuthRequest, res: Response) 
   // Re-initialize temporarily disabled
   whatsappService.initialize(req.userId!).catch(() => {});
   
-  res.json({ success: true, message: 'WhatsApp reset initiated (Initialization disabled)' });
+  res.json({ success: true, message: 'WhatsApp reset initiated and re-connecting...' });
 });

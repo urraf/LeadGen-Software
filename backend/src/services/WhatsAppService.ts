@@ -59,7 +59,8 @@ class WhatsAppService {
           dataPath: env.WHATSAPP_SESSION_PATH || './.wwebjs_auth'
         }),
         webVersionCache: {
-          type: 'none'
+          type: 'remote',
+          remotePath: 'https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2412.54.html',
         },
         puppeteer: {
           executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || puppeteer.executablePath(),
@@ -67,7 +68,12 @@ class WhatsAppService {
           args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage'
+            '--disable-dev-shm-usage',
+            '--disable-accelerated-2d-canvas',
+            '--no-first-run',
+            '--no-zygote',
+            '--disable-gpu',
+            '--disable-extensions'
           ],
         },
       });

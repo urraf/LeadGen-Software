@@ -41,7 +41,7 @@ function App() {
 
           {/* Download Buttons */}
           <div className="download-group animate-slide-up delay-100">
-            <a href={`${REPO_URL}/releases/latest/download/LeadGen.Pro-Setup-1.0.0.exe`} className="btn btn-windows">
+            <a href={`${REPO_URL}/releases/latest/download/LeadGen.Pro-Setup-1.0.1.exe`} className="btn btn-windows">
               <Monitor className="btn-icon" />
               <div className="btn-text">
                 <div className="btn-label">Download for</div>
@@ -49,7 +49,7 @@ function App() {
               </div>
             </a>
 
-            <a href={`${REPO_URL}/releases/latest/download/LeadGen.Pro-1.0.0-arm64.dmg`} className="btn btn-primary">
+            <a href={`${REPO_URL}/releases/latest/download/LeadGen.Pro-1.0.1-arm64.dmg`} className="btn btn-primary">
               <Apple className="btn-icon" />
               <div className="btn-text">
                 <div className="btn-label">Download for</div>
@@ -57,7 +57,7 @@ function App() {
               </div>
             </a>
             
-             <a href={`${REPO_URL}/releases/latest/download/LeadGen.Pro-1.0.0-x64.dmg`} className="btn btn-secondary">
+             <a href={`${REPO_URL}/releases/latest/download/LeadGen.Pro-1.0.1-x64.dmg`} className="btn btn-secondary">
               <Apple className="btn-icon" />
               <div className="btn-text">
                 <div className="btn-label">Download for</div>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, keepPreviousData } from '@tanstack/react-query';
 import client from '../api/client';
 import Badge, { getStatusVariant } from '../components/ui/Badge';
 import EmptyState from '../components/ui/EmptyState';
@@ -37,6 +37,7 @@ export default function MessagesPage() {
       const res = await client.get('/messages', { params });
       return res.data;
     },
+    placeholderData: keepPreviousData,
   });
 
   const messages: MessageItem[] = data?.data || [];

@@ -137,6 +137,7 @@ export class LeadRepository {
 
   private buildFilter(userId: string, filter: LeadFilter): FilterQuery<LeadDocument> {
     const query: FilterQuery<LeadDocument> = { userId };
+    const andConditions: FilterQuery<LeadDocument>[] = [];
 
     if (filter.campaignId) {
       query.campaignId = new Types.ObjectId(filter.campaignId);
@@ -155,18 +156,33 @@ export class LeadRepository {
       query.aiScore = { $gte: filter.minScore };
     }
     if (filter.search) {
-      query.businessName = { $regex: filter.search, $options: 'i' };
+      const searchRegex = { $regex: filter.search, $options: 'i' };
+      andConditions.push({
+        $or: [
+          { businessName: searchRegex },
+          { phone: searchRegex },
+          { city: searchRegex },
+          { address: searchRegex },
+          { category: searchRegex }
+        ]
+      });
     }
     if (filter.hasWebsite !== undefined) {
       if (filter.hasWebsite) {
         query.website = { $exists: true, $type: 'string', $ne: '' };
       } else {
-        query.$or = [
-          { website: { $exists: false } },
-          { website: null },
-          { website: '' }
-        ];
+        andConditions.push({
+          $or: [
+            { website: { $exists: false } },
+            { website: null },
+            { website: '' }
+          ]
+        });
       }
+    }
+
+    if (andConditions.length > 0) {
+      query.$and = andConditions;
     }
 
     return query;
