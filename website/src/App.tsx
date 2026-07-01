@@ -66,7 +66,23 @@ function App() {
             </a>
           </div>
           
-          <p className="disclaimer animate-slide-up delay-200">
+          <div className="mac-help-card glass-card animate-slide-up delay-200">
+            <h4 className="mac-help-title">⚠️ Mac Users: "App is damaged" Error?</h4>
+            <p className="mac-help-text">
+              Because this app is free and open-source, Apple's Gatekeeper will falsely flag it as "damaged" when you try to open it. 
+              To fix this in 10 seconds:
+            </p>
+            <ol className="mac-help-list">
+              <li>Drag <strong>LeadGen Pro</strong> into your Applications folder.</li>
+              <li>Open the <strong>Terminal</strong> app on your Mac (press <kbd>Cmd + Space</kbd> and type Terminal).</li>
+              <li>Copy and paste this exact command and press Enter:</li>
+            </ol>
+            <div className="mac-help-code">
+              <code>xattr -cr /Applications/"LeadGen Pro.app"</code>
+            </div>
+          </div>
+
+          <p className="disclaimer animate-slide-up delay-300">
             Free and open-source. Requires your own API keys.
           </p>
         </div>
