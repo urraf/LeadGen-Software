@@ -26,7 +26,7 @@ function App() {
         <div className="hero-content animate-slide-up">
           <div className="version-badge glass-card">
             <span className="pulse-dot"></span>
-            <span className="version-text">v1.0.0 is now available</span>
+            <span className="version-text">v1.0.1 is now available</span>
           </div>
           
           <h1 className="hero-title">
